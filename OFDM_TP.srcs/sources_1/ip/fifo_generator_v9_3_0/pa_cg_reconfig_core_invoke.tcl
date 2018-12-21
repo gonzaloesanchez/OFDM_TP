@@ -10,22 +10,20 @@ set cgIndexMapPath "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources
 
 set cgProjectPath "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/coregen.cgc"
 
-set ipFile "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo_generator_v9_3_0.xco"
+set ipFile "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo_16_8a1.xco"
 
-set ipName "fifo_generator_v9_3_0"
-
-set vlnv "xilinx.com:ip:fifo_generator:9.3"
-
-set cgPartSpec "xc3s500e-4fg320"
-
-set bomFilePath "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/pa_cg_bom.xml"
-
-set hdlType "VHDL"
+set ipName "fifo_16_8a1"
 
 set chains "CUSTOMIZE_CURRENT_CHAIN INSTANTIATION_TEMPLATES_CHAIN"
 
-# configure the IP
-set result [source "/home/gonza/Xilinx/14.7/ISE_DS/PlanAhead/scripts/pa_cg_config_core.tcl"]
+set bomFilePath "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/pa_cg_bom.xml"
+
+set cgPartSpec "xc3s500e-4fg320"
+
+set hdlType "VHDL"
+
+# generate the IP
+set result [source "/home/gonza/Xilinx/14.7/ISE_DS/PlanAhead/scripts/pa_cg_reconfig_core.tcl"]
 
 exit $result
 
