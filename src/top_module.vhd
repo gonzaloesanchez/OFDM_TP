@@ -86,8 +86,7 @@ architecture top_module_arch of top_module is
 
  --VITERBI -> FIFO SALIDA
 --	signal decoder_out_s: std_logic_vector(0 downto 0);
---	signal decoder_ready_s, fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
---	signal out_s : std_logic;
+	signal fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
 
 begin
 
@@ -119,7 +118,7 @@ begin
 	fifo_out0 : fifo_16_1a8
 		PORT MAP(
 			rst    => rst_s,
-			wr_clk => clk2x_s,
+			wr_clk => clk_s,
 			rd_clk => fx2_clk,
 			din    => fifo_out_data_in_s,
 			wr_en  => fifo_out_wr_en_s,

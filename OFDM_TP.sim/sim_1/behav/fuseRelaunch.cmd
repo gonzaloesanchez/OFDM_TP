@@ -1,0 +1,1 @@
+-intstyle "pa" -incremental -L "work" -o "top_module_tb.exe" --prj "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj" -top "work.top_module_tb" 
