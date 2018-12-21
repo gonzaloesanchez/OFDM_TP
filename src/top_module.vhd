@@ -80,8 +80,8 @@ architecture top_module_arch of top_module is
 	signal clk_s,clk2x_s, rst_s : std_logic;
 
 	--FIFO ENTRADA -> FIFO SALIDA
-	signal fifo_in_rd_en_s,fifo_in_empty_s, conv_ce_s : std_logic;
-	signal conv_in_s: std_logic_vector(0 downto 0);
+	signal fifo_in_rd_en_s,fifo_in_empty_s, fifo_out_wr_en_s : std_logic;
+	signal fifo_out_data_in_s: std_logic_vector(0 downto 0);
 
 
  --VITERBI -> FIFO SALIDA
@@ -106,10 +106,10 @@ begin
 			din    => h2fData_out,
 			wr_en  => h2fValid_out,
 			rd_en  => fifo_in_rd_en_s,
-			dout   => conv_in_s,
+			dout   => fifo_out_data_in_s,
 			full   => open,
 			empty  => fifo_in_empty_s,
-			valid  => conv_ce_s
+			valid  => fifo_out_wr_en_s
 		);
 
 		fifo_in_rd_en_s<=not fifo_in_empty_s;
@@ -121,8 +121,8 @@ begin
 			rst    => rst_s,
 			wr_clk => clk2x_s,
 			rd_clk => fx2_clk,
-			din    => decoder_out_s,
-			wr_en  => decoder_ready_s,
+			din    => fifo_out_data_in_s,
+			wr_en  => fifo_out_wr_en_s,
 			rd_en  => fifo_out_rd_en_s,
 			dout   => f2hData_in,
 			full   => open,
@@ -130,6 +130,6 @@ begin
 			valid  => f2hValid_in
 		);
 
-		fifo_out_rd_en_s<=(not fifo_out_empty_s) and f2hReady_out;
+		fifo_out_rd_en_s<=not fifo_out_empty_s;
 
 end top_module_arch;
