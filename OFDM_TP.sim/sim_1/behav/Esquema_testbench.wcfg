@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_module_tb.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="top_module_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/top_module_tb/fx2_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fx2_clk</obj_property>
+      <obj_property name="ObjectShortName">fx2_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/fx2_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fx2_rst</obj_property>
+      <obj_property name="ObjectShortName">fx2_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/clk_system" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_system</obj_property>
+      <obj_property name="ObjectShortName">clk_system</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/clk2x_system" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk2x_system</obj_property>
+      <obj_property name="ObjectShortName">clk2x_system</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/h2fdata_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">h2fdata_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">h2fdata_out[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/h2fvalid_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">h2fvalid_out</obj_property>
+      <obj_property name="ObjectShortName">h2fvalid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/f2hready_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">f2hready_out</obj_property>
+      <obj_property name="ObjectShortName">f2hready_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/h2fready_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">h2fready_in</obj_property>
+      <obj_property name="ObjectShortName">h2fready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/f2hdata_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">f2hdata_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">f2hdata_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/f2hvalid_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">f2hvalid_in</obj_property>
+      <obj_property name="ObjectShortName">f2hvalid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider19" type="divider">
+      <obj_property name="label">Fifo IN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_in0/rd_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_in0/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider18" type="divider">
+      <obj_property name="label">Encoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/encoder0/ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/encoder0/data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_in[0:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/encoder0/data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/encoder0/dv_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dv_o</obj_property>
+      <obj_property name="ObjectShortName">dv_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">Viterbi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/clk_system" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_system</obj_property>
+      <obj_property name="ObjectShortName">clk_system</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/viterbi0/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/viterbi0/dv_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dv_o</obj_property>
+      <obj_property name="ObjectShortName">dv_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/viterbi0/data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out[0:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[0:0]</obj_property>
+   </wvobject>
+</wave_config>

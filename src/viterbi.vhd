@@ -110,7 +110,7 @@ begin
       else
         if enable = '1' then
           count := count+1;
-          if count = 4 then
+          if count = 5 then     --valor original = 4 
             count := 0;
             dv_o <= '1';
           end if;

@@ -420,7 +420,7 @@ LAB11:    xsi_set_current_line(112, ng2);
     t2 = (t0 + 2968U);
     t4 = *((char **)t2);
     t11 = *((int *)t4);
-    t1 = (t11 == 4);
+    t1 = (t11 == 5);
     if (t1 != 0)
         goto LAB14;
 

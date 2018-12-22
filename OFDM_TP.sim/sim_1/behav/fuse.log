@@ -1,4 +1,4 @@
-Running: /home/gonza/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle pa -incremental -L work -o top_module_tb.exe --prj /home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj -top work.top_module_tb 
+Running: /home/gonza/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "pa" -incremental -L "work" -o "top_module_tb.exe" --prj "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj" -top "work.top_module_tb" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -12,8 +12,8 @@ Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module.vhd" i
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 104600 KB
-Fuse CPU Usage: 1360 ms
+Fuse Memory Usage: 104608 KB
+Fuse CPU Usage: 1390 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -37,9 +37,9 @@ Compiling architecture fifo_16_1a8_a of entity fifo_16_1a8 [fifo_16_1a8_default]
 Compiling architecture top_module_arch of entity top_module [top_module_default]
 Compiling architecture behavior of entity top_module_tb
 Time Resolution for simulation is 1ps.
-Waiting for 12 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 33 VHDL Units
 Built simulation executable top_module_tb.exe
-Fuse Memory Usage: 682376 KB
-Fuse CPU Usage: 1700 ms
-GCC CPU Usage: 7490 ms
+Fuse Memory Usage: 682384 KB
+Fuse CPU Usage: 1680 ms
+GCC CPU Usage: 230 ms
