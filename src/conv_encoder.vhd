@@ -19,8 +19,10 @@ entity conv_encoder is
     port(
   clk   : in std_logic;
   rst   : in std_logic;
+  ce    : in std_logic;
   data_in: in std_logic;
-  data_out  : out std_logic_vector(1 downto 0)
+  data_out  : out std_logic_vector(1 downto 0);
+  dv_o  : out std_logic
   );
 end;
 
@@ -58,5 +60,6 @@ architecture conv_encoder_arq of conv_encoder is
     u1 <= data_in xor m1 xor m2;
     u2 <= data_in xor m2;
     coded <= u1 & u2;
+    dv_o <= ce;         --solamente tendremos datos validos si habilitamos el modulo
 
   end;

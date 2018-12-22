@@ -57,6 +57,33 @@ architecture top_module_arch of top_module is
 		);
 	END COMPONENT;
 
+-- Encoder convolucional
+
+	COMPONENT conv_encoder
+		PORT(
+			clk   : in std_logic;
+			rst   : in std_logic;
+			ce    : in std_logic;
+			data_in: in std_logic;
+			data_out  : out std_logic_vector(1 downto 0);
+			dv_o  : out std_logic
+		);
+		END COMPONENT;
+
+	-- VITERBI
+
+	COMPONENT viterbi
+		PORT(
+			clk: in std_logic;
+			rst: in std_logic;
+			enable : in std_logic;
+			data_in: in std_logic_vector (1 downto 0);
+			dv_o : out std_logic;
+			data_out: out std_logic);
+		);
+		END COMPONENT;
+
+
 	--FIFO 16 BYTES 1 A 8
 
 	COMPONENT fifo_16_1a8
@@ -79,14 +106,19 @@ architecture top_module_arch of top_module is
 	--GENERALES
 	signal clk_s,clk2x_s, rst_s : std_logic;
 
-	--FIFO ENTRADA -> FIFO SALIDA
-	signal fifo_in_rd_en_s,fifo_in_empty_s, fifo_out_wr_en_s : std_logic;
-	signal fifo_out_data_in_s: std_logic_vector(0 downto 0);
+	--FIFO ENTRADA -> ENCODER
+	signal fifo_in_rd_en_s,fifo_in_empty_s : std_logic;
+	signal enc_in_ce_s : std_logic;
+	signal encoder_data_in_s: std_logic_vector(0 downto 0);
 
+	-- ENCODER -> VITERBI
+	signal viterbi_in_s: std_logic_vector(1 downto 0);
+	signal viterbi_ce_s : std_logic;
 
  --VITERBI -> FIFO SALIDA
---	signal decoder_out_s: std_logic_vector(0 downto 0);
-	signal fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
+
+
+	signal fifo_out_empty_s, fifo_out_rd_en_s, fifo_out_wr_en_s : std_logic;
 
 begin
 
@@ -105,14 +137,37 @@ begin
 			din    => h2fData_out,
 			wr_en  => h2fValid_out,
 			rd_en  => fifo_in_rd_en_s,
-			dout   => fifo_out_data_in_s,
+			dout   => encoder_data_in_s,		--salida de datos, entrada al encoder
 			full   => open,
 			empty  => fifo_in_empty_s,
-			valid  => fifo_out_wr_en_s
+			valid  => enc_in_ce_s						--habilitacion de datos de entrada
 		);
 
 		fifo_in_rd_en_s<=not fifo_in_empty_s;
 
+
+-- Encoder
+	encoder0 : conv_encoder
+		PORT MAP(
+			clk   => clk_s,
+			rst   => fx2_rst,
+			ce =>  enc_in_ce_s,
+			data_in =>  encoder_data_in_s,
+			data_out =>  viterbi_in_s,
+			dv_o => viterbi_ce_s
+		);
+
+
+--VITERBI
+	viterbi0 : viterbi
+		PORT MAP(
+		clk				=> clk_s,
+		rst				=> fx2_rst,
+		enable		=> viterbi_ce_s,
+		data_in		=> viterbi_in_s,
+		dv_o			=> fifo_out_wr_en_s,
+		data_out	=> fifo_out_data_in_s
+		);
 
 		--FIFO DE SALIDA
 	fifo_out0 : fifo_16_1a8
