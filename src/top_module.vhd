@@ -64,7 +64,7 @@ architecture top_module_arch of top_module is
 			clk   : in std_logic;
 			rst   : in std_logic;
 			ce    : in std_logic;
-			data_in: in std_logic;
+			data_in: in std_logic_vector(0 downto 0);
 			data_out  : out std_logic_vector(1 downto 0);
 			dv_o  : out std_logic
 		);
@@ -79,7 +79,7 @@ architecture top_module_arch of top_module is
 			enable : in std_logic;
 			data_in: in std_logic_vector (1 downto 0);
 			dv_o : out std_logic;
-			data_out: out std_logic);
+			data_out: out std_logic_vector (0 downto 0)
 		);
 		END COMPONENT;
 
@@ -116,8 +116,7 @@ architecture top_module_arch of top_module is
 	signal viterbi_ce_s : std_logic;
 
  --VITERBI -> FIFO SALIDA
-
-
+	signal fifo_out_data_in_s : std_logic_vector(0 downto 0);
 	signal fifo_out_empty_s, fifo_out_rd_en_s, fifo_out_wr_en_s : std_logic;
 
 begin

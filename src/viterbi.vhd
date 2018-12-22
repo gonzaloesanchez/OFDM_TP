@@ -13,7 +13,7 @@ entity viterbi is
           enable : in std_logic;
           data_in: in std_logic_vector (1 downto 0);
           dv_o : out std_logic;
-          data_out: out std_logic); --the ouput will be delayed for 3 clock, because Traceback Depth is 3
+          data_out: out std_logic_vector (0 downto 0)); --the ouput will be delayed for 3 clock, because Traceback Depth is 3
 end viterbi;
 
 architecture viterbi_arq of viterbi is
@@ -101,7 +101,7 @@ begin
    begin
     if rising_edge(clk) and (data_in/= "UU")  then -- Positive Edge
       if rst = '1' then
-        data_out <= '0';
+        data_out(0) <= '0';
         dv_o <= '0';
         InputLevel:=0;
         TracebackResult:=(0,0,0,0,0,0,0,0);
@@ -126,7 +126,7 @@ begin
 
          --Output the decoded data, from the previous path metric calculations
          --Output will be delayed for 3 clock cycles
-         data_out <= outputVector(InputLevel);
+         data_out(0) <= outputVector(InputLevel);
 
          InputLevel:=InputLevel+1;
          if(InputLevel =TraceBackDepth)then
