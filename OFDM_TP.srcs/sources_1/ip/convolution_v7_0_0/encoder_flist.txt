@@ -1,0 +1,13 @@
+# Output products list for <encoder>
+encoder/doc/convolution_ds248.pdf
+encoder/doc/convolution_v7_0_vinfo.html
+encoder.asy
+encoder.gise
+encoder.ngc
+encoder.vhd
+encoder.vho
+encoder.xco
+encoder.xise
+encoder_flist.txt
+encoder_readme.txt
+encoder_xmdf.tcl

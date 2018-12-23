@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+  <IPInstance name="encoder">
+    <FileSets>
+      <FileSet generator="apply_current_project_options_generator">
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="model_parameter_resolution_generator">
+        <File name="./model_parameter_resolution_generator.xlog" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ip_xco_generator">
+        <File name="./encoder.xco" type="xco" timestamp="Sun Dec 23 22:44:24 GMT 2018" checksum="0xFFE09397"></File>
+      </FileSet>
+      <FileSet generator="associated_files_generator">
+        <File name="./associated_files_generator.xlog" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ngc_netlist_generator">
+        <File name="./encoder.ngc" type="ngc" timestamp="Sun Dec 23 22:45:40 GMT 2018" checksum="0x84690317"></File>
+        <File name="./encoder.vhd" type="vhdl" timestamp="Sun Dec 23 22:44:25 GMT 2018" checksum="0x4933AE0C"></File>
+      </FileSet>
+      <FileSet generator="obfuscate_netlist_generator">
+        <File name="./encoder.ngc" type="ngc" timestamp="Sun Dec 23 22:45:41 GMT 2018" checksum="0x474CFB93"></File>
+      </FileSet>
+      <FileSet generator="padded_implementation_netlist_generator">
+        <File name="./padded_implementation_netlist_generator.xlog" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="instantiation_template_generator">
+        <File name="./encoder.vho" type="vho" timestamp="Sun Dec 23 22:45:43 GMT 2018" checksum="0xC477FAFE"></File>
+      </FileSet>
+      <FileSet generator="rtl_simulation_model_generator">
+        <File name="./encoder.vhd" type="vhdl" timestamp="Sun Dec 23 22:45:48 GMT 2018" checksum="0x4933AE0C"></File>
+      </FileSet>
+      <FileSet generator="synthesis_instantiation_wrapper_generator">
+        <File name="./synthesis_instantiation_wrapper_generator.xlog" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="all_documents_generator">
+        <File name="./encoder/doc/convolution_ds248.pdf" type="ignore" timestamp="Sun Dec 23 22:45:52 GMT 2018" checksum="0x3B4CA967"></File>
+        <File name="./encoder/doc/convolution_v7_0_vinfo.html" type="ignore" timestamp="Sun Dec 23 22:45:52 GMT 2018" checksum="0x02359C44"></File>
+      </FileSet>
+      <FileSet generator="asy_generator">
+        <File name="./encoder.asy" type="asy" timestamp="Sun Dec 23 22:45:52 GMT 2018" checksum="0x77798E31"></File>
+      </FileSet>
+      <FileSet generator="xmdf_generator">
+        <File name="./encoder_xmdf.tcl" type="tclXmdf" timestamp="Sun Dec 23 22:45:52 GMT 2018" checksum="0x6C1BE97D"></File>
+      </FileSet>
+      <FileSet generator="ise_generator">
+        <File name="./encoder.gise" type="ignore" timestamp="Sun Dec 23 22:45:55 GMT 2018" checksum="0xB5A90A7F"></File>
+        <File name="./encoder.xise" type="ignore" timestamp="Sun Dec 23 22:45:55 GMT 2018" checksum="0xBD388E3E"></File>
+      </FileSet>
+      <FileSet generator="deliver_readme_generator">
+        <File name="./encoder_readme.txt" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0x6CB0393C"></File>
+      </FileSet>
+      <FileSet generator="flist_generator">
+        <File name="./encoder_flist.txt" type="ignore" timestamp="Sun Dec 23 22:45:56 GMT 2018" checksum="0xEC71FD50"></File>
+      </FileSet>
+    </FileSets>
+  </IPInstance>
+</BillOfMaterials>
