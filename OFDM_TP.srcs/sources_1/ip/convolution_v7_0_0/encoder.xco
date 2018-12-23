@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Dec 23 21:16:04 2018
+# Date: Sun Dec 23 22:44:24 2018
 #
 ##############################################################
 #
@@ -41,14 +41,14 @@ SELECT Convolution_Encoder xilinx.com:ip:convolution:7.0
 # BEGIN Parameters
 CSET ce=true
 CSET component_name=encoder
-CSET constraint_length=7
-CSET convolution_code0=1001111
-CSET convolution_code1=1101101
-CSET convolution_code2=0000011
-CSET convolution_code3=0000011
-CSET convolution_code4=0000011
-CSET convolution_code5=0000011
-CSET convolution_code6=0000011
+CSET constraint_length=3
+CSET convolution_code0=111
+CSET convolution_code1=101
+CSET convolution_code2=011
+CSET convolution_code3=011
+CSET convolution_code4=011
+CSET convolution_code5=011
+CSET convolution_code6=011
 CSET dual_output=false
 CSET fd_in=false
 CSET input_rate=1
@@ -66,4 +66,4 @@ CSET synchronous_clear=true
 MISC pkg_timestamp=2013-10-13T18:23:30Z
 # END Extra information
 GENERATE
-# CRC: 8f4398a0
+# CRC: 6fa9f163

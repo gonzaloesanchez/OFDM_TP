@@ -171,7 +171,7 @@ begin
 		--Conexiones desde ENCODER a VITERBI
 		viterbi_data_in0(0) <= encoder_data_out(0);
 		viterbi_data_in1(0) <= encoder_data_out(1);
-		viterbi_ce <= encoder_do_v;
+		--viterbi_ce <= encoder_do_v;
 
 
 		--DECODIFICADOR VITERBI
@@ -185,6 +185,14 @@ begin
 			sclr     => rst_s,
 			clk      => clk_s
 		);
+
+		viterbi_ce <= '1' when encoder_do_v = '1' or viterbi_rdy_s = '1' else
+						  '0';
+
+		--viterbi_data_in0(0) <= encoder_data_out(0) when encoder_do_v = '1' else
+		--							 '0'; -- padding
+		--viterbi_data_in1(0) <= encoder_data_out(1) when encoder_do_v = '1' else
+		--							 '0'; -- padding
 
 --Conexiones desde VITERBI a FIFO OUT
 	fifo_out_data_in_s <= viterbi_data_out;

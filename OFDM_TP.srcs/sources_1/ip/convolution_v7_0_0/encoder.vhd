@@ -92,7 +92,7 @@ end component;
 		generic map(
 			c_has_rffd => 0,
 			c_output_rate => 2,
-			c_constraint_length => 7,
+			c_constraint_length => 3,
 			c_dual_channel => 0,
 			c_punc_output_rate => 2,
 			c_punc_input_rate => 1,
@@ -110,8 +110,8 @@ end component;
 			c_convolution_code4 => 3,
 			c_convolution_code3 => 3,
 			c_convolution_code2 => 3,
-			c_convolution_code1 => 109,
-			c_convolution_code0 => 79);
+			c_convolution_code1 => 5,
+			c_convolution_code0 => 7);
 -- synthesis translate_on
 BEGIN
 -- synthesis translate_off

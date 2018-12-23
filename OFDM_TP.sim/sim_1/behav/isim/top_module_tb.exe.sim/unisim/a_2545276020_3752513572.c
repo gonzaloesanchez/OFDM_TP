@@ -502,16 +502,16 @@ extern void unisim_a_3120128138_3752513572_init()
 	xsi_register_executes(pe);
 }
 
+extern void unisim_a_3449702363_3752513572_init()
+{
+	static char *pe[] = {(void *)unisim_a_2545276020_3752513572_p_0};
+	xsi_register_didat("unisim_a_3449702363_3752513572", "isim/top_module_tb.exe.sim/unisim/a_3449702363_3752513572.didat");
+	xsi_register_executes(pe);
+}
+
 extern void unisim_a_1863101193_3752513572_init()
 {
 	static char *pe[] = {(void *)unisim_a_2545276020_3752513572_p_0};
 	xsi_register_didat("unisim_a_1863101193_3752513572", "isim/top_module_tb.exe.sim/unisim/a_1863101193_3752513572.didat");
-	xsi_register_executes(pe);
-}
-
-extern void unisim_a_3822252837_3752513572_init()
-{
-	static char *pe[] = {(void *)unisim_a_2545276020_3752513572_p_0};
-	xsi_register_didat("unisim_a_3822252837_3752513572", "isim/top_module_tb.exe.sim/unisim/a_3822252837_3752513572.didat");
 	xsi_register_executes(pe);
 }

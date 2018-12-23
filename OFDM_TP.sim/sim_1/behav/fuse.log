@@ -12,8 +12,8 @@ Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module.vhd" i
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 176420 KB
-Fuse CPU Usage: 2620 ms
+Fuse Memory Usage: 138116 KB
+Fuse CPU Usage: 1580 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -32,23 +32,21 @@ Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator
 Compiling architecture fifo_16_8a1_a of entity fifo_16_8a1 [fifo_16_8a1_default]
 Compiling package bip_utils_pkg_v2_0
 Compiling package convolution_pack_v7_0
-Compiling architecture behavioral of entity CONVOLUTION_V7_0 [\CONVOLUTION_V7_0(2,7,0,0,1,2,79...]
+Compiling architecture behavioral of entity CONVOLUTION_V7_0 [\CONVOLUTION_V7_0(2,3,0,0,1,2,7,...]
 WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/convolution_v7_0.vhd" Line 208: Range is empty (null range)
 Compiling architecture encoder_a of entity encoder [encoder_default]
 Compiling architecture vcc_v of entity VCC [vcc_default]
 Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("11100100")(0,7)\]
+Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("00000100")(0,7)\]
+Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00000100")(0,7)\]
 Compiling architecture lut4_d_v of entity LUT4_D [\LUT4_D("1101111101000101")(0,15...]
 Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
 Compiling architecture inv_v of entity INV [inv_default]
-Compiling architecture fde_v of entity FDE [\FDE('0')\]
-Compiling architecture lut4_v of entity LUT4 [\LUT4("0000001000000000")(0,15)\]
-Compiling architecture lut3_v of entity LUT3 [\LUT3("00000100")(0,7)\]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0101000101000000")(0,15)\]
 Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
-Compiling architecture muxf8_v of entity MUXF8 [muxf8_default]
-Compiling architecture muxf7_v of entity MUXF7 [muxf7_default]
-Compiling architecture muxf6_v of entity MUXF6 [muxf6_default]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("00000100")(0,7)\]
 Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
 Compiling architecture lut2_v of entity LUT2 [\LUT2("0010")(0,3)\]
 Compiling architecture fds_v of entity FDS [\FDS('0')\]
 Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
@@ -67,8 +65,8 @@ Compiling architecture top_module_arch of entity top_module [\top_module:top_mod
 Compiling architecture behavior of entity top_module_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 157 VHDL Units
+Compiled 135 VHDL Units
 Built simulation executable top_module_tb.exe
-Fuse Memory Usage: 776544 KB
-Fuse CPU Usage: 3680 ms
-GCC CPU Usage: 190 ms
+Fuse Memory Usage: 733904 KB
+Fuse CPU Usage: 2340 ms
+GCC CPU Usage: 150 ms

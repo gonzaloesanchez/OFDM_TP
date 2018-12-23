@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Dec 23 21:05:23 2018
+# Date: Sun Dec 23 22:30:24 2018
 #
 ##############################################################
 #
@@ -49,16 +49,16 @@ CSET ce=true
 CSET channels=1
 CSET coding=Hard_Coding
 CSET component_name=viterbi
-CSET constraint_length=7
-CSET convolution0_code0=1111001
-CSET convolution0_code1=1011011
+CSET constraint_length=3
+CSET convolution0_code0=111
+CSET convolution0_code1=101
 CSET convolution0_code2=0
 CSET convolution0_code3=0
 CSET convolution0_code4=0
 CSET convolution0_code5=0
 CSET convolution0_code6=0
-CSET convolution1_code0=1111001
-CSET convolution1_code1=1011011
+CSET convolution1_code0=111
+CSET convolution1_code1=101
 CSET convolution1_code2=0
 CSET convolution1_code3=0
 CSET convolution1_code4=0
@@ -69,7 +69,7 @@ CSET convolution_code_1_radix=Binary
 CSET data_format=Signed_Magnitude
 CSET direct_traceback=None
 CSET dynamic_thresholds=false
-CSET maximum_direct=42
+CSET maximum_direct=18
 CSET norm=false
 CSET norm_thresh=250
 CSET number_of_ber_symbols=300
@@ -81,7 +81,7 @@ CSET reduced_latency=false
 CSET soft_width=1
 CSET synchronization=false
 CSET synchronous_clear=true
-CSET traceback_length=42
+CSET traceback_length=18
 CSET trellis_initialization=None
 CSET viterbi_type=Standard
 # END Parameters
@@ -89,4 +89,4 @@ CSET viterbi_type=Standard
 MISC pkg_timestamp=2013-10-13T18:46:09Z
 # END Extra information
 GENERATE
-# CRC: 2da53e34
+# CRC: 4e98f387

@@ -15,14 +15,14 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.OUTPUT_RATE">2</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PUNCTURE_CODE0">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PUNCTURE_CODE1">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONSTRAINT_LENGTH">7</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE0">1001111</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE1">1101101</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE2">0000011</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE3">0000011</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE4">0000011</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE5">0000011</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE6">0000011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONSTRAINT_LENGTH">3</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE0">111</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE1">101</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE2">011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE3">011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE4">011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE5">011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION_CODE6">011</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DUAL_OUTPUT">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ND">true</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.RFD">false</spirit:configurableElementValue>
@@ -32,13 +32,13 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SYNCHRONOUS_CLEAR">true</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CE">true</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTPUT_RATE">2</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PUNCTURED">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DUAL_CHANNEL">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PUNC_INPUT_RATE">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PUNC_OUTPUT_RATE">2</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE0">79</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE1">109</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE0">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE1">5</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE2">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE3">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION_CODE4">3</spirit:configurableElementValue>
@@ -102,8 +102,8 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:16:04 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x62163C59</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:44:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xFFE09397</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -115,16 +115,16 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.ngc</xilinx:name>
                      <xilinx:userFileType>ngc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:29 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xAC29890D</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:40 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x84690317</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./encoder.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
                      <xilinx:userFileType>vhdlSynthesis</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:16:10 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xC5BF31A5</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:44:25 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x4933AE0C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -133,8 +133,8 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.ngc</xilinx:name>
                      <xilinx:userFileType>ngc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:30 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x7F993F83</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:41 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x474CFB93</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -146,7 +146,7 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:31 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:43 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0xC477FAFE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -156,8 +156,8 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:36 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xC5BF31A5</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:48 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x4933AE0C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -170,7 +170,7 @@
                      <xilinx:name>./encoder/doc/convolution_ds248.pdf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>pdf</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:40 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:52 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x3B4CA967</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -178,7 +178,7 @@
                      <xilinx:name>./encoder/doc/convolution_v7_0_vinfo.html</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:40 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:52 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x02359C44</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -188,7 +188,7 @@
                   <xilinx:file>
                      <xilinx:name>./encoder.asy</xilinx:name>
                      <xilinx:userFileType>asy</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:40 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:52 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x77798E31</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -199,7 +199,7 @@
                      <xilinx:name>./encoder_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tclXmdf</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:40 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:52 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x6C1BE97D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -210,7 +210,7 @@
                      <xilinx:name>./encoder.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:44 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:55 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0xB5A90A7F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -218,8 +218,8 @@
                      <xilinx:name>./encoder.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:44 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x02D1B50B</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:55 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xBD388E3E</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -230,7 +230,7 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtReadme</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:45 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:56 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x6CB0393C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -242,7 +242,7 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtFlist</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:17:45 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:45:56 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0xEC71FD50</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>

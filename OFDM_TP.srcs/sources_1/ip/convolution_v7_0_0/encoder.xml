@@ -16,7 +16,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1230644107</spirit:value>
+            <spirit:value>3744523763</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1230644107</spirit:value>
+            <spirit:value>3744523763</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -52,7 +52,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1230644107</spirit:value>
+            <spirit:value>3744523763</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -70,7 +70,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1230644107</spirit:value>
+            <spirit:value>3744523763</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -496,35 +496,35 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Constraint_Length</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONSTRAINT_LENGTH" spirit:choiceRef="xippack_UserParameter_choiceref_Constraint_Length">7</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONSTRAINT_LENGTH" spirit:choiceRef="xippack_UserParameter_choiceref_Constraint_Length">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code0</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE0">1001111</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE0">111</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code1</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE1">1101101</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE1">101</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code2</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE2">0000011</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE2">011</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code3</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE3">0000011</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE3">011</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code4</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE4">0000011</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE4">011</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code5</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE5">0000011</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE5">011</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Convolution_Code6</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE6">0000011</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE6">011</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Dual_Output</spirit:name>
@@ -620,7 +620,7 @@
       <xilinx:display>
         <xilinx:displayName>Convolution Encoder</xilinx:displayName>
         <xilinx:ipType>Spirit</xilinx:ipType>
-        <xilinx:coreCreationDateTime>2018-12-23T18:17:45</xilinx:coreCreationDateTime>
+        <xilinx:coreCreationDateTime>2018-12-23T19:45:56</xilinx:coreCreationDateTime>
         <xilinx:taxonomies>
           <xilinx:taxonomy>/Communication_&amp;_Networking/Telecommunications</xilinx:taxonomy>
           <xilinx:taxonomy>/Communication_&amp;_Networking/Error_Correction</xilinx:taxonomy>

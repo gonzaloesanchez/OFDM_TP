@@ -19,24 +19,24 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DYNAMIC_THRESHOLDS">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SOFT_WIDTH">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ARCHITECTURE">Parallel</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONSTRAINT_LENGTH">7</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.MAXIMUM_DIRECT">42</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONSTRAINT_LENGTH">3</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.MAXIMUM_DIRECT">18</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.NUMBER_OF_BER_SYMBOLS">300</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BER_SYMBOL_COUNT">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VITERBI_TYPE">Standard</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BER_THRESH">600</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.REDUCED_LATENCY">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PUNCTURING">None</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE0">1111001</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE1">1011011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE0">111</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE1">101</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE2">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE3">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE4">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE5">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DATA_FORMAT">Signed_Magnitude</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION1_CODE6">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE0">1111001</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE1">1011011</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE0">111</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE1">101</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE2">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE3">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CONVOLUTION0_CODE4">0</spirit:configurableElementValue>
@@ -50,7 +50,7 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SYNCHRONOUS_CLEAR">true</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.TRELLIS_INITIALIZATION">None</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BEST_STATE">true</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.TRACEBACK_LENGTH">42</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.TRACEBACK_LENGTH">18</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.NORM_THRESH">250</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BEST_STATE_WIDTH">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BLOCK_VALID">false</spirit:configurableElementValue>
@@ -69,18 +69,18 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTPUT_RATE1">2</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SOFT_WIDTH">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVCODE0_RADIX">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_TB_STATE">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE0">121</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE1">91</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE0">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE1">5</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE2">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_BLOCK_VALID">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE3">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE4">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE5">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION1_CODE6">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE0">121</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE1">91</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE0">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE1">5</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE2">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE3">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_SCLR">1</spirit:configurableElementValue>
@@ -89,12 +89,12 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CONVOLUTION0_CODE6">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PS_STATE">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_CE">1</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DIRECT_TB_MAX">42</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DIRECT_TB_MAX">18</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_BER_RATE">300</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_MAX_RATE">2</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CHANNEL_COUNT">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.COMPONENT_NAME">viterbi</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_TRACEBACK_LENGTH">42</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_TRACEBACK_LENGTH">18</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_BEST_STATE_WIDTH">3</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_RED_LATENCY">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_BER">0</spirit:configurableElementValue>
@@ -152,8 +152,8 @@
                   <xilinx:file>
                      <xilinx:name>./viterbi.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:05:23 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xD7C68B99</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:30:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x0C7FEDBE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -162,22 +162,22 @@
                   <xilinx:file>
                      <xilinx:name>./viterbi.ngc</xilinx:name>
                      <xilinx:userFileType>ngc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:20 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x3B15529F</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:25 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x1B3AF35F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./viterbi.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
                      <xilinx:userFileType>vhdlSynthesis</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:23 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xFE4F2CA4</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:27 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8F03BDA1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./viterbi.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:14:57 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:12 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x9960A0C9</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -187,7 +187,7 @@
                   <xilinx:file>
                      <xilinx:name>./viterbi.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:27 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x9960A0C9</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -197,7 +197,7 @@
                   <xilinx:file>
                      <xilinx:name>./viterbi.asy</xilinx:name>
                      <xilinx:userFileType>asy</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:27 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0xAC2435E5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -208,7 +208,7 @@
                      <xilinx:name>./viterbi_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tclXmdf</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:27 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x706BD408</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -219,7 +219,7 @@
                      <xilinx:name>./viterbi.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:32 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x2CFD0CD1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -227,8 +227,8 @@
                      <xilinx:name>./viterbi.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xB793B0E8</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:32 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xBCA06D79</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -239,8 +239,8 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtReadme</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0xADAFA5A9</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:32 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x23852193</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -251,7 +251,7 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtFlist</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sun Dec 23 22:34:32 GMT 2018</xilinx:timeStamp>
                      <xilinx:checkSum>0x3D7D7AC7</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>

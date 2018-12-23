@@ -57,6 +57,7 @@
    <wvobject fp_name="/top_module_tb/f2hdata_in" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">f2hdata_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">f2hdata_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/f2hvalid_in" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">f2hvalid_in</obj_property>

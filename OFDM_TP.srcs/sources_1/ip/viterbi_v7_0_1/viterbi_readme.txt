@@ -1,6 +1,12 @@
 The following files were generated for 'viterbi' in directory
 /home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/viterbi_v7_0_1/
 
+Generate FLIST file:
+   Text file listing all of the output files produced when a customized core was
+   generated in the CORE Generator.
+
+   * viterbi_flist.txt
+
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.
 
