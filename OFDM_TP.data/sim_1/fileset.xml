@@ -10,6 +10,7 @@
       <Option Name="TopRTLFile" Val="$PPRDIR/src/top_module_tb.vhd"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
       <Option Name="SimulationRunTime" Val="10000ns"/>
+      <Option Name="SimMode" Val="post-implementation"/>
       <Option Name="SrcSet" Val="sources_1"/>
       <Option Name="NGOutputHDLFormat" Val="vhdl"/>
     </Config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+  <IPInstance name="encoder">
+    <FileSets>
+      <FileSet generator="apply_current_project_options_generator">
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Sun Dec 23 20:26:34 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="customization_generator">
+        <File name="./customization_generator.xlog" type="ignore" timestamp="Sun Dec 23 20:26:34 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ip_xco_generator">
+        <File name="./encoder.xco" type="xco" timestamp="Sun Dec 23 20:26:28 GMT 2018" checksum="0x411E8B03"></File>
+      </FileSet>
+      <FileSet generator="instantiation_template_generator">
+        <File name="./encoder.vho" type="vho" timestamp="Sun Dec 23 20:26:31 GMT 2018" checksum="0xC477FAFE"></File>
+      </FileSet>
+      <FileSet generator="xmdf_generator">
+        <File name="./encoder_xmdf.tcl" type="tclXmdf" timestamp="Sun Dec 23 20:26:34 GMT 2018" checksum="0x89716B4E"></File>
+      </FileSet>
+    </FileSets>
+  </IPInstance>
+</BillOfMaterials>
