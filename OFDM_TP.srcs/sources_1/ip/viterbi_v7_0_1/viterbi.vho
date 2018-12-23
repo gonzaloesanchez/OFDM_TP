@@ -80,8 +80,3 @@ your_instance_name : viterbi
 			clk => clk);
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 
--- You must compile the wrapper file viterbi.vhd when simulating
--- the core, viterbi. When compiling the wrapper file, be sure to
--- reference the XilinxCoreLib VHDL simulation library. For detailed
--- instructions, please refer to the "CORE Generator Help".
-

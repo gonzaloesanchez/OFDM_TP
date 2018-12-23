@@ -104,7 +104,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_RDY">1</spirit:configurableElementValue>
          </spirit:configurableElementValues>
          <spirit:vendorExtensions>
-            <xilinx:instanceProperties>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
                <xilinx:projectOptions>
                   <xilinx:projectName>coregen</xilinx:projectName>
                   <xilinx:outputDirectory>./</xilinx:outputDirectory>
@@ -139,18 +139,46 @@
             </xilinx:instanceProperties>
             <xilinx:generationHistory>
                <xilinx:fileSet>
+                  <xilinx:name>customization_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
                   <xilinx:name>apply_current_project_options_generator</xilinx:name>
                </xilinx:fileSet>
                <xilinx:fileSet>
-                  <xilinx:name>customization_generator</xilinx:name>
+                  <xilinx:name>model_parameter_resolution_generator</xilinx:name>
                </xilinx:fileSet>
                <xilinx:fileSet>
                   <xilinx:name>ip_xco_generator</xilinx:name>
                   <xilinx:file>
                      <xilinx:name>./viterbi.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 20:28:23 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x07B08CF6</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 21:05:23 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD7C68B99</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ngc_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:20 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x3B15529F</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.vhd</xilinx:name>
+                     <xilinx:userFileType>vhdl</xilinx:userFileType>
+                     <xilinx:userFileType>vhdlSynthesis</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:23 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xFE4F2CA4</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.vho</xilinx:name>
+                     <xilinx:userFileType>vho</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:14:57 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9960A0C9</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -159,8 +187,18 @@
                   <xilinx:file>
                      <xilinx:name>./viterbi.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 20:28:25 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x3ECD04CD</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9960A0C9</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>asy_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xAC2435E5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -170,8 +208,51 @@
                      <xilinx:name>./viterbi_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tclXmdf</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sun Dec 23 20:28:30 GMT 2018</xilinx:timeStamp>
-                     <xilinx:checkSum>0x8B54E4D4</xilinx:checkSum>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:24 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x706BD408</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2CFD0CD1</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB793B0E8</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0xADAFA5A9</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./viterbi_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>Sun Dec 23 21:15:37 GMT 2018</xilinx:timeStamp>
+                     <xilinx:checkSum>0x3D7D7AC7</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -186,7 +267,7 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.COMPONENT_NAME">viterbi_v7_0_1</spirit:configurableElementValue>
          </spirit:configurableElementValues>
          <spirit:vendorExtensions>
-            <xilinx:instanceProperties>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
                <xilinx:projectOptions>
                   <xilinx:projectName>coregen</xilinx:projectName>
                   <xilinx:outputDirectory>./</xilinx:outputDirectory>

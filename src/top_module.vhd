@@ -152,7 +152,7 @@ begin
 		fifo_in_rd_en_s<=not fifo_in_empty_s;
 
 		--Conexiones desde FIFO IN a ENCODER
-		encoder_data_in <= fifo_in_data_out;
+		encoder_data_in <= fifo_in_data_out(0);
 		encoder_new_data_in <= fifo_in_do_v;
 
 
@@ -177,8 +177,8 @@ begin
 		--DECODIFICADOR VITERBI
 	viterbi0 : viterbi
 		PORT MAP(
-			data_in0 => viterbi_data_in0(0),
-			data_in1 => viterbi_data_in1(0),
+			data_in0 => viterbi_data_in0,
+			data_in1 => viterbi_data_in1,
 			data_out => viterbi_data_out(0),
 			rdy      => viterbi_rdy_s,
 			ce       => viterbi_ce,
@@ -187,7 +187,7 @@ begin
 		);
 
 --Conexiones desde VITERBI a FIFO OUT
-	fifo_out_data_in_s <= viterbi_data_out(0);
+	fifo_out_data_in_s <= viterbi_data_out;
 	fifo_out_wr_en_s <= viterbi_rdy_s;
 
 		--FIFO DE SALIDA

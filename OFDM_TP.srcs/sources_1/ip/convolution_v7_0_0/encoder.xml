@@ -1,678 +1,634 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spirit:component xmlns:xilinx="http://www.xilinx.com"
-		xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<spirit:vendor>xilinx.com</spirit:vendor>
-	<spirit:library>customized_ip</spirit:library>
-	<spirit:name>encoder</spirit:name>
-	<spirit:version>1.0</spirit:version>
-	<spirit:model>
-		<spirit:views>
-			<spirit:view>
-				<spirit:name>xilinx_miscfiles</spirit:name>
-				<spirit:displayName>Miscellaneous</spirit:displayName>
-				<spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
-				<spirit:fileSetRef>
-					<spirit:localName>xilinx_miscfiles_view_fileset</spirit:localName>
-				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>customizationCRC</spirit:name>
-						<spirit:value>1230644107</spirit:value>
-					</spirit:parameter>
-					<spirit:parameter>
-						<spirit:name>customizationCRCversion</spirit:name>
-						<spirit:value>1</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
-			</spirit:view>
-			<spirit:view>
-				<spirit:name>xilinx_anylanguageinstantiationtemplate</spirit:name>
-				<spirit:displayName>Instantiation Template</spirit:displayName>
-				<spirit:envIdentifier>:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
-				<spirit:fileSetRef>
-					<spirit:localName>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:localName>
-				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>customizationCRC</spirit:name>
-						<spirit:value>1230644107</spirit:value>
-					</spirit:parameter>
-					<spirit:parameter>
-						<spirit:name>customizationCRCversion</spirit:name>
-						<spirit:value>1</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
-			</spirit:view>
-		</spirit:views>
-		<spirit:ports>
-			<spirit:port>
-				<spirit:name>data_in</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue>0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>data_out_v</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:vector>
-						<spirit:left spirit:format="long"
-								spirit:resolve="dependent"
-								spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUTPUT_RATE&apos;))-1">1</spirit:left>
-						<spirit:right spirit:format="long">0</spirit:right>
-					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic_vector</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PUNCTURED&apos;)) = 0 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_DUAL_CHANNEL&apos;)) = 1)">true</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>data_out_s</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PUNCTURED&apos;)) = 1 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_DUAL_CHANNEL&apos;)) = 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>fd_in</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue>0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_FD&apos;)) != 0 )">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>nd</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue>0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ND&apos;)) != 0 )">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>rfd</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RFD&apos;)) != 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>rffd</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RFFD&apos;)) != 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>rdy</spirit:name>
-				<spirit:wire>
-					<spirit:direction>out</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RDY&apos;)) != 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>ce</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue>0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_CE&apos;)) != 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>sclr</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-					<spirit:driver>
-						<spirit:defaultValue>0</spirit:defaultValue>
-					</spirit:driver>
-				</spirit:wire>
-				<spirit:vendorExtensions>
-					<xilinx:portInfo>
-						<xilinx:enablement>
-							<xilinx:presence>optional</xilinx:presence>
-							<xilinx:isEnabled xilinx:resolve="dependent"
-									xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0)">false</xilinx:isEnabled>
-						</xilinx:enablement>
-					</xilinx:portInfo>
-				</spirit:vendorExtensions>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>clk</spirit:name>
-				<spirit:wire>
-					<spirit:direction>in</spirit:direction>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName>std_logic</spirit:typeName>
-							<spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
-				</spirit:wire>
-			</spirit:port>
-		</spirit:ports>
-		<spirit:modelParameters>
-			<spirit:modelParameter xsi:type="spirit:nameValueTypeType"
-					spirit:dataType="integer">
-				<spirit:name>c_output_rate</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_OUTPUT_RATE">2</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_constraint_length</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">7</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_punctured</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_PUNCTURED">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_dual_channel</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_DUAL_CHANNEL">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_punc_input_rate</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_PUNC_INPUT_RATE">3</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_punc_output_rate</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_PUNC_OUTPUT_RATE">4</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code0</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE0">121</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code1</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE1">91</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code2</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE2">5</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code3</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE3">7</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code4</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE4">5</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code5</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE5">7</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_convolution_code6</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE6">5</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_punc_code0</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_PUNC_CODE0">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_punc_code1</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_PUNC_CODE1">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_nd</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_ND">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_rfd</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_RFD">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_rdy</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_RDY">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_fd</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_FD">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_rffd</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_RFFD">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_ce</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_CE">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="integer">
-				<spirit:name>c_has_sclr</spirit:name>
-				<spirit:value spirit:format="long"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_HAS_SCLR">0</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="string">
-				<spirit:name>c_family</spirit:name>
-				<spirit:value spirit:format="string"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_FAMILY">virtex5</spirit:value>
-			</spirit:modelParameter>
-			<spirit:modelParameter spirit:dataType="string">
-				<spirit:name>c_xdevicefamily</spirit:name>
-				<spirit:value spirit:format="string"
-						spirit:resolve="generated"
-						spirit:id="MODELPARAM_VALUE.C_XDEVICEFAMILY">virtex5</spirit:value>
-			</spirit:modelParameter>
-		</spirit:modelParameters>
-	</spirit:model>
-	<spirit:choices>
-		<spirit:choice>
-			<spirit:name>xippack_UserParameter_choiceref_Constraint_Length</spirit:name>
-			<spirit:enumeration spirit:text="3">3</spirit:enumeration>
-			<spirit:enumeration spirit:text="4">4</spirit:enumeration>
-			<spirit:enumeration spirit:text="5">5</spirit:enumeration>
-			<spirit:enumeration spirit:text="6">6</spirit:enumeration>
-			<spirit:enumeration spirit:text="7">7</spirit:enumeration>
-			<spirit:enumeration spirit:text="8">8</spirit:enumeration>
-			<spirit:enumeration spirit:text="9">9</spirit:enumeration>
-		</spirit:choice>
-	</spirit:choices>
-	<spirit:fileSets>
-		<spirit:fileSet>
-			<spirit:name>xilinx_miscfiles_view_fileset</spirit:name>
-			<spirit:file>
-				<spirit:name>encoder.xco</spirit:name>
-				<spirit:userFileType>xco</spirit:userFileType>
-			</spirit:file>
-			<spirit:file>
-				<spirit:name>encoder_xmdf.tcl</spirit:name>
-				<spirit:fileType>tclSource</spirit:fileType>
-			</spirit:file>
-		</spirit:fileSet>
-		<spirit:fileSet>
-			<spirit:name>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:name>
-			<spirit:file>
-				<spirit:name>encoder.vho</spirit:name>
-				<spirit:userFileType>vhdlTemplate</spirit:userFileType>
-			</spirit:file>
-		</spirit:fileSet>
-	</spirit:fileSets>
-	<spirit:description>The Convolutional Encoder LogiCORE from Xilinx is a high-speed, compact convolutional encoder with a puncturing option. The Convolutional Encoder core is parameterizable, allowing the designer to control the constraint length and the type of convolutional and puncture code. The core is delivered through the Xilinx CORE Generator System and integrates seamlessly with the Xilinx design flow.</spirit:description>
-	<spirit:parameters>
-		<spirit:parameter>
-			<spirit:name>Component_Name</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.COMPONENT_NAME">encoder</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Punctured</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.PUNCTURED">false</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Input_Rate</spirit:name>
-			<spirit:value spirit:format="long"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.INPUT_RATE"
-					spirit:minimum="1"
-					spirit:maximum="12"
-					spirit:rangeType="long">1</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Output_Rate</spirit:name>
-			<spirit:value spirit:format="long"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.OUTPUT_RATE"
-					spirit:minimum="2"
-					spirit:maximum="7"
-					spirit:rangeType="long">2</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Puncture_Code0</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.PUNCTURE_CODE0">0</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Puncture_Code1</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.PUNCTURE_CODE1">0</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Constraint_Length</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONSTRAINT_LENGTH"
-					spirit:choiceRef="xippack_UserParameter_choiceref_Constraint_Length">7</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code0</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE0">1001111</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code1</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE1">1101101</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code2</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE2">0000011</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code3</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE3">0000011</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code4</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE4">0000011</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code5</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE5">0000011</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Convolution_Code6</spirit:name>
-			<spirit:value spirit:format="string"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CONVOLUTION_CODE6">0000011</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Dual_Output</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.DUAL_OUTPUT">false</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>ND</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.ND">true</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>RFD</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.RFD">false</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>FD_IN</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.FD_IN">false</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>RFFD</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.RFFD">false</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>RDY</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.RDY">true</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>Synchronous_Clear</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.SYNCHRONOUS_CLEAR">true</spirit:value>
-		</spirit:parameter>
-		<spirit:parameter>
-			<spirit:name>CE</spirit:name>
-			<spirit:value spirit:format="bool"
-					spirit:resolve="user"
-					spirit:id="PARAM_VALUE.CE">true</spirit:value>
-		</spirit:parameter>
-	</spirit:parameters>
-	<spirit:vendorExtensions>
-		<xilinx:coreProperties>
-			<xilinx:supportedFamilies>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">QArtix7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">QArtix7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">QKintex7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QKintex7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">QVirtex7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QVirtex7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QVirtex6L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QVirtex6</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QSpartan6L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QSpartan6</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QVirtex5</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QRVirtex5</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QVirtex4</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">QRVirtex4</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan3</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan3A</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan3ADSP</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan3E</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan6</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Spartan6L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">ASpartan6</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">ASpartan3</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">ASpartan3A</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">ASpartan3E</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">ASpartan3ADSP</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Virtex4</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Virtex5</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Virtex6L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Virtex6</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Virtex7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">Virtex7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Production">Kintex7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">Kintex7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">Artix7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">Artix7L</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">aArtix7</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
-				<xilinx:family xilinx:lifeCycle="Pre-Production">azynq</xilinx:family>
-			</xilinx:supportedFamilies>
-			<xilinx:customization>
-				<xilinx:customizer>Spirit</xilinx:customizer>
-				<xilinx:elaborator>Sim</xilinx:elaborator>
-				<xilinx:customizationTarget>convolution_v7.0.class</xilinx:customizationTarget>
-				<xilinx:guiType>Cpp</xilinx:guiType>
-				<xilinx:coreMixedCaseComponentName>false</xilinx:coreMixedCaseComponentName>
-			</xilinx:customization>
-			<xilinx:generation>
-				<xilinx:generationFlow>Spirit</xilinx:generationFlow>
-				<xilinx:deliverSimulationModel>true</xilinx:deliverSimulationModel>
-				<xilinx:forceStructuralVerilogModel>true</xilinx:forceStructuralVerilogModel>
-				<xilinx:overrideImplementationFileType>NGC</xilinx:overrideImplementationFileType>
-				<xilinx:deliverLegacyOutputs>
-					<xilinx:legacyOutput>EDIFtop</xilinx:legacyOutput>
-				</xilinx:deliverLegacyOutputs>
-			</xilinx:generation>
-			<xilinx:display>
-				<xilinx:displayName>Convolution Encoder</xilinx:displayName>
-				<xilinx:ipType>Spirit</xilinx:ipType>
-				<xilinx:coreCreationDateTime>2018-12-23T17:26:35</xilinx:coreCreationDateTime>
-				<xilinx:taxonomies>
-					<xilinx:taxonomy>/Communication_&amp;_Networking/Telecommunications</xilinx:taxonomy>
-					<xilinx:taxonomy>/Communication_&amp;_Networking/Error_Correction</xilinx:taxonomy>
-				</xilinx:taxonomies>
-			</xilinx:display>
-		</xilinx:coreProperties>
-		<xilinx:packagingInfo>
-			<xilinx:xilinxVersion>14.7</xilinx:xilinxVersion>
-		</xilinx:packagingInfo>
-	</spirit:vendorExtensions>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>encoder</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_miscfiles</spirit:name>
+        <spirit:displayName>Miscellaneous</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_miscfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>1230644107</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>1230644107</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>1230644107</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguageinstantiationtemplate</spirit:name>
+        <spirit:displayName>Instantiation Template</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>1230644107</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>data_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue>0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_out_v</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUTPUT_RATE&apos;))-1">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PUNCTURED&apos;)) = 0 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_DUAL_CHANNEL&apos;)) = 1)">true</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_out_s</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PUNCTURED&apos;)) = 1 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_DUAL_CHANNEL&apos;)) = 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fd_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue>0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_FD&apos;)) != 0 )">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>nd</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue>0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ND&apos;)) != 0 )">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rfd</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RFD&apos;)) != 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rffd</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RFFD&apos;)) != 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rdy</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_RDY&apos;)) != 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ce</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue>0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_CE&apos;)) != 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sclr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue>0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>c_output_rate</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUTPUT_RATE">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_constraint_length</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONSTRAINT_LENGTH">7</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_punctured</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PUNCTURED">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_dual_channel</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DUAL_CHANNEL">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_punc_input_rate</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PUNC_INPUT_RATE">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_punc_output_rate</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PUNC_OUTPUT_RATE">4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code0</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE0">121</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code1</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE1">91</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code2</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE2">5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code3</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE3">7</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code4</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE4">5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code5</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE5">7</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_convolution_code6</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONVOLUTION_CODE6">5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_punc_code0</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PUNC_CODE0">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_punc_code1</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PUNC_CODE1">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_nd</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ND">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_rfd</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_RFD">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_rdy</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_RDY">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_fd</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_FD">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_rffd</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_RFFD">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_ce</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_CE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_sclr</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SCLR">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_family</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FAMILY">virtex5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_xdevicefamily</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_XDEVICEFAMILY">virtex5</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>xippack_UserParameter_choiceref_Constraint_Length</spirit:name>
+      <spirit:enumeration spirit:text="3">3</spirit:enumeration>
+      <spirit:enumeration spirit:text="4">4</spirit:enumeration>
+      <spirit:enumeration spirit:text="5">5</spirit:enumeration>
+      <spirit:enumeration spirit:text="6">6</spirit:enumeration>
+      <spirit:enumeration spirit:text="7">7</spirit:enumeration>
+      <spirit:enumeration spirit:text="8">8</spirit:enumeration>
+      <spirit:enumeration spirit:text="9">9</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_miscfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>encoder.xco</spirit:name>
+        <spirit:userFileType>xco</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>encoder.asy</spirit:name>
+        <spirit:userFileType>asy</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>encoder_xmdf.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>encoder.ngc</spirit:name>
+        <spirit:userFileType>ngc</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>encoder.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>encoder.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>encoder.vho</spirit:name>
+        <spirit:userFileType>vhdlTemplate</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>The Convolutional Encoder LogiCORE from Xilinx is a high-speed, compact convolutional encoder with a puncturing option. The Convolutional Encoder core is parameterizable, allowing the designer to control the constraint length and the type of convolutional and puncture code. The core is delivered through the Xilinx CORE Generator System and integrates seamlessly with the Xilinx design flow.</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.COMPONENT_NAME">encoder</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Punctured</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.PUNCTURED">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Input_Rate</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INPUT_RATE" spirit:minimum="1" spirit:maximum="12" spirit:rangeType="long">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Output_Rate</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OUTPUT_RATE" spirit:minimum="2" spirit:maximum="7" spirit:rangeType="long">2</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Puncture_Code0</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PUNCTURE_CODE0">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Puncture_Code1</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PUNCTURE_CODE1">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Constraint_Length</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONSTRAINT_LENGTH" spirit:choiceRef="xippack_UserParameter_choiceref_Constraint_Length">7</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code0</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE0">1001111</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code1</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE1">1101101</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code2</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE2">0000011</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code3</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE3">0000011</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code4</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE4">0000011</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code5</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE5">0000011</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Convolution_Code6</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.CONVOLUTION_CODE6">0000011</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Dual_Output</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DUAL_OUTPUT">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>ND</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ND">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RFD</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RFD">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FD_IN</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.FD_IN">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RFFD</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RFFD">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RDY</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RDY">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Synchronous_Clear</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SYNCHRONOUS_CLEAR">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CE</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CE">true</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreProperties>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">QArtix7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">QArtix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">QKintex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QKintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">QVirtex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QSpartan6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QSpartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QRVirtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QRVirtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3A</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3ADSP</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3E</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3A</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3E</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3ADSP</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">Virtex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">Kintex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">Artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">Artix7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">aArtix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">azynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:customization>
+        <xilinx:customizer>Spirit</xilinx:customizer>
+        <xilinx:elaborator>Sim</xilinx:elaborator>
+        <xilinx:customizationTarget>convolution_v7.0.class</xilinx:customizationTarget>
+        <xilinx:guiType>Cpp</xilinx:guiType>
+        <xilinx:coreMixedCaseComponentName>false</xilinx:coreMixedCaseComponentName>
+      </xilinx:customization>
+      <xilinx:generation>
+        <xilinx:generationFlow>Spirit</xilinx:generationFlow>
+        <xilinx:deliverSimulationModel>true</xilinx:deliverSimulationModel>
+        <xilinx:forceStructuralVerilogModel>true</xilinx:forceStructuralVerilogModel>
+        <xilinx:overrideImplementationFileType>NGC</xilinx:overrideImplementationFileType>
+        <xilinx:deliverLegacyOutputs>
+          <xilinx:legacyOutput>EDIFtop</xilinx:legacyOutput>
+        </xilinx:deliverLegacyOutputs>
+      </xilinx:generation>
+      <xilinx:display>
+        <xilinx:displayName>Convolution Encoder</xilinx:displayName>
+        <xilinx:ipType>Spirit</xilinx:ipType>
+        <xilinx:coreCreationDateTime>2018-12-23T18:17:45</xilinx:coreCreationDateTime>
+        <xilinx:taxonomies>
+          <xilinx:taxonomy>/Communication_&amp;_Networking/Telecommunications</xilinx:taxonomy>
+          <xilinx:taxonomy>/Communication_&amp;_Networking/Error_Correction</xilinx:taxonomy>
+        </xilinx:taxonomies>
+      </xilinx:display>
+    </xilinx:coreProperties>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>14.7</xilinx:xilinxVersion>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
 </spirit:component>
