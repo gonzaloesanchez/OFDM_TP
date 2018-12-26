@@ -12,3 +12,4 @@ at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurati
 at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/top_module_tb/uut/fifo_4a2_0/U0/gconvfifo/inst_conv_fifo/).
 at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/top_module_tb/uut/fifo_out0/U0/gconvfifo/inst_conv_fifo/).
 Finished circuit initialization process.
+# exit 0
