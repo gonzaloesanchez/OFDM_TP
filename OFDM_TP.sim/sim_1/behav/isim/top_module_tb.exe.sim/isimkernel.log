@@ -2,27 +2,27 @@ Command line:
    top_module_tb.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60399
+     -socket  40243
 
-Sun Dec 23 19:51:52 2018
+Wed Dec 26 11:52:36 2018
 
 
- Elaboration Time: 0.09 sec
+ Elaboration Time: 0.13 sec
 
- Current Memory Usage: 212.644 Meg
+ Current Memory Usage: 218.849 Meg
 
- Total Signals          : 4989
- Total Nets             : 4484
- Total Signal Drivers   : 1615
- Total Blocks           : 892
- Total Primitive Blocks : 852
- Total Processes        : 1293
- Total Traceable Variables  : 1811
- Total Scalar Nets and Variables : 33483
+ Total Signals          : 6339
+ Total Nets             : 8821
+ Total Signal Drivers   : 2234
+ Total Blocks           : 997
+ Total Primitive Blocks : 910
+ Total Processes        : 1607
+ Total Traceable Variables  : 2535
+ Total Scalar Nets and Variables : 38680
 
- Total Simulation Time: 0.28 sec
+ Total Simulation Time: 0.63 sec
 
- Current Memory Usage: 288.145 Meg
+ Current Memory Usage: 294.351 Meg
 
-Sun Dec 23 19:53:25 2018
+Wed Dec 26 11:53:09 2018
 

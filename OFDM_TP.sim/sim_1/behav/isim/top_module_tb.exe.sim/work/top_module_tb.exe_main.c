@@ -14,18 +14,18 @@
 
 struct XSI_INFO xsi_info;
 
-char *UNISIM_P_0947159679;
-char *IEEE_P_2592010699;
-char *STD_STANDARD;
 char *UNISIM_P_3222816464;
 char *STD_TEXTIO;
 char *IEEE_P_2717149903;
+char *UNISIM_P_0947159679;
+char *IEEE_P_2592010699;
+char *IEEE_P_1242562249;
+char *STD_STANDARD;
 char *IEEE_P_1367372525;
 char *IEEE_P_3620187407;
 char *IEEE_P_3499444699;
 char *XILINXCORELIB_P_1003066856;
 char *XILINXCORELIB_P_1837083571;
-char *IEEE_P_1242562249;
 
 
 int main(int argc, char **argv)
@@ -52,6 +52,27 @@ int main(int argc, char **argv)
     xilinxcorelib_p_1003066856_init();
     xilinxcorelib_a_3272429799_3212880686_init();
     work_a_1881823395_0207835417_init();
+    xilinxcorelib_a_2134103596_3212880686_init();
+    xilinxcorelib_a_0195360071_3212880686_init();
+    xilinxcorelib_a_0298300629_3212880686_init();
+    xilinxcorelib_a_0109594839_3212880686_init();
+    work_a_1677898878_3510033034_init();
+    work_a_1051664689_0054526510_init();
+    work_a_4193756592_2839087068_init();
+    work_a_0551549151_2080659162_init();
+    work_a_0555586280_2080659162_init();
+    work_a_0593177777_2080659162_init();
+    work_a_0580470406_2080659162_init();
+    work_a_0668356611_2080659162_init();
+    work_a_0638859828_2080659162_init();
+    work_a_0609387629_2080659162_init();
+    work_a_0079305357_1181938964_init();
+    work_a_3227156784_1131979798_init();
+    xilinxcorelib_a_3770213234_3212880686_init();
+    xilinxcorelib_a_1122755192_3212880686_init();
+    xilinxcorelib_a_2798477191_3212880686_init();
+    xilinxcorelib_a_3595074435_3212880686_init();
+    work_a_4289529783_1526420376_init();
     unisim_a_2562466605_1496654361_init();
     unisim_a_1717296735_4086321779_init();
     unisim_a_2809486315_3391448174_init();
@@ -111,19 +132,19 @@ int main(int argc, char **argv)
 
     xsi_register_tops("work_a_2388550197_2372691052");
 
-    UNISIM_P_0947159679 = xsi_get_engine_memory("unisim_p_0947159679");
-    IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");
-    xsi_register_ieee_std_logic_1164(IEEE_P_2592010699);
-    STD_STANDARD = xsi_get_engine_memory("std_standard");
     UNISIM_P_3222816464 = xsi_get_engine_memory("unisim_p_3222816464");
     STD_TEXTIO = xsi_get_engine_memory("std_textio");
     IEEE_P_2717149903 = xsi_get_engine_memory("ieee_p_2717149903");
+    UNISIM_P_0947159679 = xsi_get_engine_memory("unisim_p_0947159679");
+    IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");
+    xsi_register_ieee_std_logic_1164(IEEE_P_2592010699);
+    IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
+    STD_STANDARD = xsi_get_engine_memory("std_standard");
     IEEE_P_1367372525 = xsi_get_engine_memory("ieee_p_1367372525");
     IEEE_P_3620187407 = xsi_get_engine_memory("ieee_p_3620187407");
     IEEE_P_3499444699 = xsi_get_engine_memory("ieee_p_3499444699");
     XILINXCORELIB_P_1003066856 = xsi_get_engine_memory("xilinxcorelib_p_1003066856");
     XILINXCORELIB_P_1837083571 = xsi_get_engine_memory("xilinxcorelib_p_1837083571");
-    IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
 
     return xsi_run_simulation(argc, argv);
 

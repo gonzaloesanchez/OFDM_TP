@@ -14,5 +14,11 @@
 <msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+</msg>
+
 </messages>
 
