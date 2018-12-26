@@ -14,8 +14,8 @@
 
 struct XSI_INFO xsi_info;
 
-char *UNISIM_P_0947159679;
 char *IEEE_P_2592010699;
+char *UNISIM_P_0947159679;
 char *STD_STANDARD;
 char *UNISIM_P_3222816464;
 char *STD_TEXTIO;
@@ -52,6 +52,16 @@ int main(int argc, char **argv)
     xilinxcorelib_p_1003066856_init();
     xilinxcorelib_a_3272429799_3212880686_init();
     work_a_1881823395_0207835417_init();
+    xilinxcorelib_a_2134103596_3212880686_init();
+    xilinxcorelib_a_0195360071_3212880686_init();
+    xilinxcorelib_a_0298300629_3212880686_init();
+    xilinxcorelib_a_0109594839_3212880686_init();
+    work_a_1677898878_3510033034_init();
+    xilinxcorelib_a_3770213234_3212880686_init();
+    xilinxcorelib_a_1122755192_3212880686_init();
+    xilinxcorelib_a_2798477191_3212880686_init();
+    xilinxcorelib_a_3595074435_3212880686_init();
+    work_a_4289529783_1526420376_init();
     unisim_a_2562466605_1496654361_init();
     unisim_a_1717296735_4086321779_init();
     unisim_a_2809486315_3391448174_init();
@@ -111,9 +121,9 @@ int main(int argc, char **argv)
 
     xsi_register_tops("work_a_2388550197_2372691052");
 
-    UNISIM_P_0947159679 = xsi_get_engine_memory("unisim_p_0947159679");
     IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");
     xsi_register_ieee_std_logic_1164(IEEE_P_2592010699);
+    UNISIM_P_0947159679 = xsi_get_engine_memory("unisim_p_0947159679");
     STD_STANDARD = xsi_get_engine_memory("std_standard");
     UNISIM_P_3222816464 = xsi_get_engine_memory("unisim_p_3222816464");
     STD_TEXTIO = xsi_get_engine_memory("std_textio");

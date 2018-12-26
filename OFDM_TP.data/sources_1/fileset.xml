@@ -9,6 +9,20 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_v9_3_3/fifo_4a2.xci">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_v9_3_2/fifo_2a4.xci">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/fifo_generator_v9_3_1/fifo_16_1a8.xci">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
@@ -39,20 +53,6 @@
     <File Path="$PPRDIR/src/top_module_tb.vhd">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_v9_3_2/fifo_2a4.xci">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_v9_3_3/fifo_4a2.xci">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>

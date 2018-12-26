@@ -70,6 +70,41 @@ architecture top_module_arch of top_module is
 			clk        : in  std_logic);
 	end component;
 
+
+	--FIFO 2 A 4
+
+	COMPONENT fifo_2a4
+		PORT(
+			rst    : IN  STD_LOGIC;
+			wr_clk : IN  STD_LOGIC;
+			rd_clk : IN  STD_LOGIC;
+			din    : IN  STD_LOGIC_VECTOR(1 DOWNTO 0);
+			wr_en  : IN  STD_LOGIC;
+			rd_en  : IN  STD_LOGIC;
+			dout   : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			full   : OUT STD_LOGIC;
+			empty  : OUT STD_LOGIC;
+			valid  : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+	--FIFO 4 A 2
+
+	COMPONENT fifo_4a2
+		PORT(
+			rst    : IN  STD_LOGIC;
+			wr_clk : IN  STD_LOGIC;
+			rd_clk : IN  STD_LOGIC;
+			din    : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+			wr_en  : IN  STD_LOGIC;
+			rd_en  : IN  STD_LOGIC;
+			dout   : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+			full   : OUT STD_LOGIC;
+			empty  : OUT STD_LOGIC;
+			valid  : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
 	--DECODIFICADOR VITERBI
 
 	component viterbi
@@ -116,6 +151,18 @@ architecture top_module_arch of top_module is
 	signal encoder_data_out : std_logic_vector(1 downto 0);
 	signal encoder_do_v,encoder_new_data_in : std_logic;
 
+	-- FIFO 2 A 4
+	signal fifo_2a4_data_in : std_logic_vector(1 downto 0);
+	signal fifo_2a4_data_out : std_logic_vector(3 downto 0);
+	signal fifo_2a4_rd_en_s,fifo_2a4_wr_en_s,fifo_2a4_empty_s : std_logic;
+	signal fifo_2a4_do_v : std_logic;
+
+	-- FIFO 4 A 2
+	signal fifo_4a2_data_in : std_logic_vector(3 downto 0);
+	signal fifo_4a2_data_out : std_logic_vector(1 downto 0);
+	signal fifo_4a2_rd_en_s,fifo_4a2_wr_en_s,fifo_4a2_empty_s : std_logic;
+	signal fifo_4a2_do_v : std_logic;
+
  --VITERBI
 	signal viterbi_data_out,viterbi_data_in0,viterbi_data_in1: std_logic_vector(0 downto 0);
 	signal viterbi_rdy_s,viterbi_ce : std_logic;
@@ -139,7 +186,7 @@ begin
 		PORT MAP(
 			rst    => fx2_rst,
 			wr_clk => fx2_clk,
-			rd_clk => clk_s,
+			rd_clk => clk2x_s,
 			din    => h2fData_out,
 			wr_en  => h2fValid_out,
 			rd_en  => fifo_in_rd_en_s,
@@ -165,13 +212,55 @@ begin
 			nd 				 => encoder_new_data_in,
 			ce         => '1',
 			sclr       => rst_s,
-			clk        => clk_s
+			clk        => clk2x_s
 		);
 
-		--Conexiones desde ENCODER a VITERBI
-		viterbi_data_in0(0) <= encoder_data_out(0);
-		viterbi_data_in1(0) <= encoder_data_out(1);
-		--viterbi_ce <= encoder_do_v;
+		--Conexiones desde ENCODER a FIFO 2a4
+		fifo_2a4_data_in <= encoder_data_out;
+		fifo_2a4_wr_en_s <= encoder_do_v;
+
+		-- FIFO 2 a 4
+		fifo_2a4_0 : fifo_2a4
+			PORT MAP(
+				rst    => rst_s,
+				wr_clk => clk2x_s,
+				rd_clk => clk_s,
+				din    => fifo_2a4_data_in,
+				wr_en  => fifo_2a4_wr_en_s,
+				rd_en  => fifo_2a4_rd_en_s,
+				dout   => fifo_2a4_data_out,
+				full   => open,
+				empty  => fifo_2a4_empty_s,
+				valid  => fifo_2a4_do_v
+			);
+
+		fifo_2a4_rd_en_s<=not fifo_2a4_empty_s;
+
+
+		--Conexiones desde FIFO 2a4 a FIFO 4a2
+		fifo_4a2_data_in <= fifo_2a4_data_out;
+		fifo_4a2_wr_en_s <= fifo_2a4_do_v;
+
+		--FIFO 4a2
+		fifo_4a2_0 : fifo_4a2
+			PORT MAP(
+				rst    => rst_s,
+				wr_clk => clk_s,
+				rd_clk => clk2x_s,
+				din    => fifo_4a2_data_in,
+				wr_en  => fifo_4a2_wr_en_s,
+				rd_en  => fifo_4a2_rd_en_s,
+				dout   => fifo_4a2_data_out,
+				full   => open,
+				empty  => fifo_4a2_empty_s,
+				valid  => fifo_4a2_do_v
+			);
+
+		fifo_4a2_rd_en_s<=not fifo_4a2_empty_s;
+
+		--Conexiones de FIFO 4a2 a VITERBI
+		viterbi_data_in0(0) <= fifo_4a2_data_out(0);
+		viterbi_data_in1(0) <= fifo_4a2_data_out(1);
 
 
 		--DECODIFICADOR VITERBI
@@ -183,10 +272,10 @@ begin
 			rdy      => viterbi_rdy_s,
 			ce       => viterbi_ce,
 			sclr     => rst_s,
-			clk      => clk_s
+			clk      => clk2x_s
 		);
 
-		viterbi_ce <= '1' when encoder_do_v = '1' or viterbi_rdy_s = '1' else
+		viterbi_ce <= '1' when fifo_4a2_do_v = '1' or viterbi_rdy_s = '1' else
 						  '0';
 
 		--viterbi_data_in0(0) <= encoder_data_out(0) when encoder_do_v = '1' else
@@ -202,7 +291,7 @@ begin
 	fifo_out0 : fifo_16_1a8
 		PORT MAP(
 			rst    => rst_s,
-			wr_clk => clk_s,
+			wr_clk => clk2x_s,
 			rd_clk => fx2_clk,
 			din    => fifo_out_data_in_s,
 			wr_en  => fifo_out_wr_en_s,

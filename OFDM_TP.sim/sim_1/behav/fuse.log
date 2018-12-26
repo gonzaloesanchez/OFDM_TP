@@ -1,10 +1,12 @@
-Running: /home/gonza/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "pa" -incremental -L "work" -o "top_module_tb.exe" --prj "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj" -top "work.top_module_tb" 
+Running: /home/gonza/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle pa -incremental -L work -o top_module_tb.exe --prj /home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj -top work.top_module_tb 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Analyzing Verilog file "/home/gonza/Xilinx/14.7/ISE_DS/PlanAhead/data/verilog/src/glbl.v" into library work
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/viterbi_v7_0_1/viterbi.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_3/fifo_4a2.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_2/fifo_2a4.vhd" into library work
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_1/fifo_16_1a8.vhd" into library work
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo_16_8a1.vhd" into library work
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/convolution_v7_0_0/encoder.vhd" into library work
@@ -12,8 +14,8 @@ Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module.vhd" i
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 138116 KB
-Fuse CPU Usage: 1580 ms
+Fuse Memory Usage: 141212 KB
+Fuse CPU Usage: 1690 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -35,6 +37,18 @@ Compiling package convolution_pack_v7_0
 Compiling architecture behavioral of entity CONVOLUTION_V7_0 [\CONVOLUTION_V7_0(2,3,0,0,1,2,7,...]
 WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/convolution_v7_0.vhd" Line 208: Range is empty (null range)
 Compiling architecture encoder_a of entity encoder [encoder_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(2,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,5,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,5,"Blan...]
+Compiling architecture fifo_2a4_a of entity fifo_2a4 [fifo_2a4_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(4,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,4,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,4,"Blan...]
+Compiling architecture fifo_4a2_a of entity fifo_4a2 [fifo_4a2_default]
 Compiling architecture vcc_v of entity VCC [vcc_default]
 Compiling architecture gnd_v of entity GND [gnd_default]
 Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("00000100")(0,7)\]
@@ -64,9 +78,9 @@ Compiling architecture fifo_16_1a8_a of entity fifo_16_1a8 [fifo_16_1a8_default]
 Compiling architecture top_module_arch of entity top_module [\top_module:top_module_tb:uut:\]
 Compiling architecture behavior of entity top_module_tb
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 135 VHDL Units
+Waiting for 48 sub-compilation(s) to finish...
+Compiled 155 VHDL Units
 Built simulation executable top_module_tb.exe
-Fuse Memory Usage: 733904 KB
-Fuse CPU Usage: 2340 ms
-GCC CPU Usage: 150 ms
+Fuse Memory Usage: 736412 KB
+Fuse CPU Usage: 2730 ms
+GCC CPU Usage: 22630 ms
