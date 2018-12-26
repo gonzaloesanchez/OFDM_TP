@@ -2,6 +2,22 @@
 <DARoots Version="1" Minor="26">
   <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/cuarto_cuadrante.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cordic_compensado/src/cuarto_cuadrante.vhd"/>
+        <Attr Name="ImportTime" Val="1545685968"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/cordic_iter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cordic_compensado/src/cordic_iter.vhd"/>
+        <Attr Name="ImportTime" Val="1536457480"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/viterbi_v7_0_1/viterbi.xco">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
@@ -44,18 +60,6 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/top_module.vhd">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/src/top_module_tb.vhd">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/src/Mapper.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Mapper_16psk/src/Mapper.vhd"/>
@@ -72,26 +76,22 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/cordic_iter.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../cordic_compensado/src/cordic_iter.vhd"/>
-        <Attr Name="ImportTime" Val="1536457480"/>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/cuarto_cuadrante.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../cordic_compensado/src/cuarto_cuadrante.vhd"/>
-        <Attr Name="ImportTime" Val="1545685968"/>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/src/conv_angulo.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../conversor_angulo/conversor_angulo.srcs/sources_1/imports/src/conv_angulo.vhd"/>
         <Attr Name="ImportTime" Val="1545758821"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/src/top_module.vhd">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/src/top_module_tb.vhd">
+      <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>

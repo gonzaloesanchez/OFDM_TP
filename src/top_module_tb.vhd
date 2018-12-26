@@ -128,7 +128,7 @@ BEGIN
 
 		wait until fx2_clk = '1';
 
-		for i_loop in 0 to 15 loop
+		for i_loop in 0 to 32 loop
 			h2fData_out <= std_logic_vector(to_unsigned(i_loop, h2fData_out'length));
 			h2fValid_out<='1';
 			wait for fx2_clk_period;

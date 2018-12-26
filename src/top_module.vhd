@@ -88,6 +88,55 @@ architecture top_module_arch of top_module is
 		);
 	END COMPONENT;
 
+	-- MAPPER
+	COMPONENT mapper
+	generic(
+    N : natural := 16; --Ancho de la palabra
+    B : natural := 4 --Cantidad de bits de entrada
+    );
+  port(
+    clk : in std_logic;
+    rst : in std_logic;
+    en_i : in std_logic;
+    data_in  : in std_logic_vector(B-1 downto 0);
+    dv_o : out std_logic;
+    real_o  : out std_logic_vector(N-1 downto 0);
+    img_o  : out std_logic_vector(N-1 downto 0)
+    );
+	END COMPONENT;
+
+	-- CORDIC
+	COMPONENT cordic_completo
+	generic(
+    N : natural := 16; --Ancho de la palabra
+    ITER : natural := 16);--Numero de iteraciones
+  port(
+    clk : in std_logic;
+    rst : in std_logic;
+    en_i : in std_logic;
+    x_i  : in std_logic_vector(N-1 downto 0);
+    y_i  : in std_logic_vector(N-1 downto 0);
+    dv_o : out std_logic;
+    z_o  : out std_logic_vector(N-1 downto 0)
+    );
+	END COMPONENT;
+
+	-- Conversor de angulo
+	COMPONENT conv_angulo
+	generic(
+    N : natural := 16; --Ancho de la palabra
+    B : natural := 4 --Cantidad de bits de salida
+    );
+  port(
+    clk : in std_logic;
+    rst : in std_logic;
+    en_i : in std_logic;
+    data_in  : in std_logic_vector(N-1 downto 0);
+    dv_o : out std_logic;
+    data_out  : out std_logic_vector(B-1 downto 0)
+    );
+	END COMPONENT;
+
 	--FIFO 4 A 2
 
 	COMPONENT fifo_4a2
@@ -140,6 +189,9 @@ architecture top_module_arch of top_module is
 
 	--GENERALES
 	signal clk_s,clk2x_s, rst_s : std_logic;
+	constant N_tb: integer:= 16;
+  constant B_tb: integer:= 4;
+	constant  ITER : natural := 7;--Numero de iteraciones del cordic
 
 	--FIFO ENTRADA
 	signal fifo_in_data_out : std_logic_vector(0 downto 0);
@@ -162,6 +214,26 @@ architecture top_module_arch of top_module is
 	signal fifo_4a2_data_out : std_logic_vector(1 downto 0);
 	signal fifo_4a2_rd_en_s,fifo_4a2_wr_en_s,fifo_4a2_empty_s : std_logic;
 	signal fifo_4a2_do_v : std_logic;
+
+	--MAPPER
+	signal mapper_data_in : std_logic_vector(3 downto 0);
+	signal mapper_real_out,mapper_img_out : std_logic_vector(15 downto 0);
+	signal mapper_en_s : std_logic;
+	signal mapper_dv_s : std_logic;
+
+	--CORDIC
+	signal cordic_real_in,cordic_img_in : std_logic_vector(15 downto 0);
+	signal cordic_en_s : std_logic;
+	signal cordic_dv_s : std_logic;
+	signal cordic_data_out : std_logic_vector(15 downto 0);
+
+	--CONVERSOR DE ANGULO
+	signal conv_en_s : std_logic;
+	signal conv_dv_s : std_logic;
+	signal conv_data_in : std_logic_vector(15 downto 0);
+	signal conv_data_out : std_logic_vector(3 downto 0);
+
+
 
  --VITERBI
 	signal viterbi_data_out,viterbi_data_in0,viterbi_data_in1: std_logic_vector(0 downto 0);
@@ -236,10 +308,72 @@ begin
 
 		fifo_2a4_rd_en_s<=not fifo_2a4_empty_s;
 
+		--Conexiones desde FIFO 2a4 a MAPPER
+		mapper_en_s <= fifo_2a4_do_v;
+		mapper_data_in <= fifo_2a4_data_out;
 
-		--Conexiones desde FIFO 2a4 a FIFO 4a2
-		fifo_4a2_data_in <= fifo_2a4_data_out;
-		fifo_4a2_wr_en_s <= fifo_2a4_do_v;
+		--MAPPER
+		mapper0: mapper
+		generic map(
+		  N => N_tb,
+		  B => B_tb
+		)
+	  port map(
+	    clk =>  clk_s,
+	    rst =>  rst_s,
+	    en_i =>  mapper_en_s,
+	    data_in  =>  mapper_data_in,
+	    dv_o   =>  mapper_dv_s,
+	    real_o   =>  mapper_real_out,
+	    img_o   => mapper_img_out
+	  );
+
+
+		--Conexiones desde MAPPER a CORDIC
+		cordic_en_s <= mapper_dv_s;
+		cordic_real_in <= mapper_real_out;
+		cordic_img_in <= mapper_img_out;
+
+		--CORDIC
+		cordic0: cordic_completo
+		generic map(
+	    N     => N_tb,
+	    ITER  => ITER
+	  )
+	  port map(
+	    clk =>  clk_s,
+	    rst =>  rst_s,
+	    en_i  => cordic_en_s ,
+	    x_i   => cordic_real_in ,
+	    y_i   => cordic_img_in ,
+	    dv_o => cordic_dv_s,
+	    z_o  => cordic_data_out
+	  );
+
+
+		--Conexiones desde CORDIC a CONVERSOR DE ANGULO
+		conv_en_s <= cordic_dv_s;
+		conv_data_in <= cordic_data_out;
+
+		--CONVERSOR DE ANGULO
+		conv0 : conv_angulo
+		generic map(
+		  N => N_tb,
+		  B => B_tb
+		)
+	  port map(
+	    clk =>  clk_s,
+	    rst =>  rst_s,
+	    en_i => conv_en_s ,
+	    data_in  => conv_data_in ,
+	    dv_o   => conv_dv_s ,
+	    data_out   => conv_data_out
+	  );
+
+
+		--Conexiones desde CONVERSOR DE ANGULO a FIFO 4a2
+		fifo_4a2_data_in <= conv_data_out;
+		fifo_4a2_wr_en_s <= conv_dv_s;
 
 		--FIFO 4a2
 		fifo_4a2_0 : fifo_4a2
