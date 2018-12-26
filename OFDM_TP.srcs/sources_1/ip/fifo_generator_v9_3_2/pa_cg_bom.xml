@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+  <IPInstance name="fifo_2a4">
+    <FileSets>
+      <FileSet generator="apply_current_project_options_generator">
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Wed Dec 26 13:34:34 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="customization_generator">
+        <File name="./customization_generator.xlog" type="ignore" timestamp="Wed Dec 26 13:34:34 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ip_xco_generator">
+        <File name="./fifo_2a4.xco" type="xco" timestamp="Wed Dec 26 13:34:34 GMT 2018" checksum="0xBF3D9CB5"></File>
+      </FileSet>
+      <FileSet generator="instantiation_template_generator">
+        <File name="./fifo_2a4.vho" type="vho" timestamp="Wed Dec 26 13:34:34 GMT 2018" checksum="0x9044CA44"></File>
+      </FileSet>
+      <FileSet generator="xmdf_generator">
+        <File name="./fifo_2a4_xmdf.tcl" type="tclXmdf" timestamp="Wed Dec 26 13:34:34 GMT 2018" checksum="0xB55C382B"></File>
+      </FileSet>
+    </FileSets>
+  </IPInstance>
+</BillOfMaterials>
