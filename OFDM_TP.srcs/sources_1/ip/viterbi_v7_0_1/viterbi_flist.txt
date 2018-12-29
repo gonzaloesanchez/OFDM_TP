@@ -1,0 +1,11 @@
+# Output products list for <viterbi>
+viterbi.asy
+viterbi.gise
+viterbi.ngc
+viterbi.vhd
+viterbi.vho
+viterbi.xco
+viterbi.xise
+viterbi_flist.txt
+viterbi_readme.txt
+viterbi_xmdf.tcl

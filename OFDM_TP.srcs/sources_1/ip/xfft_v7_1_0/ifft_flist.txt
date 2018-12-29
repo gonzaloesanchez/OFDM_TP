@@ -1,0 +1,13 @@
+# Output products list for <ifft>
+ifft/doc/xfft_ds260.pdf
+ifft/doc/xfft_v7_1_readme.txt
+ifft/doc/xfft_v7_1_vinfo.html
+ifft.asy
+ifft.gise
+ifft.ngc
+ifft.vhd
+ifft.vho
+ifft.xco
+ifft.xise
+ifft_flist.txt
+ifft_xmdf.tcl

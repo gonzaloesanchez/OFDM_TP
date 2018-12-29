@@ -1,0 +1,116 @@
+Running: /home/gonza/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle pa -incremental -L work -o top_module_tb.exe --prj /home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.sim/sim_1/behav/top_module_tb.prj -top work.top_module_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/gonza/Xilinx/14.7/ISE_DS/PlanAhead/data/verilog/src/glbl.v" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/cuarto_cuadrante.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/cordic_iter.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/xfft_v7_1_1/fft.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/xfft_v7_1_0/ifft.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/viterbi_v7_0_1/viterbi.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_3/fifo_4a2.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_2/fifo_2a4.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_1/fifo_16_1a8.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo_16_8a1.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/ip/convolution_v7_0_0/encoder.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/Mapper.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/delay.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/Cordic_cuatro_cuadrantes.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/OFDM_TP.srcs/sources_1/imports/src/conv_angulo.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module.vhd" into library work
+Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 254260 KB
+Fuse CPU Usage: 4150 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,5,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,5,"Blan...]
+Compiling architecture fifo_16_8a1_a of entity fifo_16_8a1 [fifo_16_8a1_default]
+Compiling package bip_utils_pkg_v2_0
+Compiling package convolution_pack_v7_0
+Compiling architecture behavioral of entity CONVOLUTION_V7_0 [\CONVOLUTION_V7_0(2,3,0,0,1,2,7,...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/convolution_v7_0.vhd" Line 208: Range is empty (null range)
+Compiling architecture encoder_a of entity encoder [encoder_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(2,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,5,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,5,"Blan...]
+Compiling architecture fifo_2a4_a of entity fifo_2a4 [fifo_2a4_default]
+Compiling architecture mapper_arq of entity mapper [\mapper(16,4)\]
+Compiling architecture delay_arq of entity delay [\delay(16)\]
+Compiling package std_logic_signed
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture fdse_v of entity FDSE [\FDSE('1')\]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("1001")(0,3)\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture mult18x18sio_v of entity MULT18X18SIO [\MULT18X18SIO(1,1,"DIRECT",1)(1,...]
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0000000011001010")(0,15)\]
+Compiling architecture muxf6_v of entity MUXF6 [muxf6_default]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("11001010")(0,7)\]
+Compiling architecture fdrs_v of entity FDRS [\FDRS('0')\]
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture ramb16_s18_s18_v of entity RAMB16_S18_S18 [\RAMB16_S18_S18:top_module_tb:uu...]
+Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("11100100")(0,7)\]
+Compiling architecture srl16e_v of entity SRL16E [\SRL16E("0000000000000000")(0,15...]
+Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
+Compiling architecture structure of entity ifft [\ifft:top_module_tb:uut:ifft0:\]
+Compiling architecture delay_arq of entity delay [\delay(23)\]
+Compiling architecture structure of entity fft [\fft:top_module_tb:uut:fft0:\]
+Compiling architecture cordic_compensate_arq of entity cordic_compensate [\cordic_compensate(16)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,0)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,1)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,2)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,3)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,4)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,5)\]
+Compiling architecture cordic_iter_arq of entity cordic_iter [\cordic_iter(16,6)\]
+Compiling architecture structural of entity cordic_completo [\cordic_completo(16,7)\]
+Compiling architecture conv_angulo_arq of entity conv_angulo [\conv_angulo(16,4)\]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(4,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,4,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,4,"Blan...]
+Compiling architecture fifo_4a2_a of entity fifo_4a2 [fifo_4a2_default]
+Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00000100")(0,7)\]
+Compiling architecture lut4_d_v of entity LUT4_D [\LUT4_D("1101111101000101")(0,15...]
+Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
+Compiling architecture fds_v of entity FDS [\FDS('0')\]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture structure of entity viterbi [\viterbi:top_module_tb:uut:viter...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(1,"0...]
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,8,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,8,"Blan...]
+Compiling architecture fifo_16_1a8_a of entity fifo_16_1a8 [fifo_16_1a8_default]
+Compiling architecture top_module_arch of entity top_module [\top_module:top_module_tb:uut:\]
+Compiling architecture behavior of entity top_module_tb
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 272 VHDL Units
+Built simulation executable top_module_tb.exe
+Fuse Memory Usage: 857192 KB
+Fuse CPU Usage: 8330 ms
+GCC CPU Usage: 28790 ms

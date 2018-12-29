@@ -1,0 +1,10 @@
+Command line:
+   top_module_tb.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  38313
+
+Sat Dec 29 15:41:25 2018
+
+
+ Elaboration Time: 0.59 sec
