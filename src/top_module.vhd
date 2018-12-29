@@ -513,7 +513,7 @@ begin
 			xn_re => fft_in_re,
 			xn_im => fft_in_im,
 			fwd_inv => '1',						--IFFT
-			fwd_inv_we => 'fft_we_s',
+			fwd_inv_we => fft_we_s,
 			rfd => open,
 			xn_index => open,
 			busy => open,
@@ -634,5 +634,33 @@ begin
 		);
 
 		fifo_out_rd_en_s<=not fifo_out_empty_s;
+
+		process (clk_system)
+		variable count: integer range 0 to 21:= 0;
+		begin
+			if rising_edge(clk_system) then
+				if fx2_rst = '1' then
+					ifft_we_s <= '0';
+					fft_we_s <= '0';
+				else
+					count := count+1;
+					if (count = 10) then
+						ifft_we_s <= '1';
+						fft_we_s <= '1';
+					end if;
+
+					if (count = 11) then
+						ifft_we_s <= '0';
+						fft_we_s <= '0';
+					end if;
+
+					if(count > 12) then
+						count := 12;
+					end if;
+
+				end if;
+			end if;
+
+		end process;
 
 end top_module_arch;

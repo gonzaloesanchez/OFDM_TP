@@ -26,7 +26,8 @@ entity delay is
 		data_in_img: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 		start_o : out std_logic;
 		data_out_re: out STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-		data_out_img: out STD_LOGIC_VECTOR(N-1 DOWNTO 0)
+		data_out_img: out STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+		write_config: out std_logic
 	);
 end;
 
@@ -45,6 +46,7 @@ process(clk)
         data_out_re <= (others =>'0');
 				memoria_re_out <= (others =>'0');
 				memoria_img_out <= (others =>'0');
+				write_config <= '0';
       else
 				start_o <= ce;
 				memoria_re_out <= data_in_re;

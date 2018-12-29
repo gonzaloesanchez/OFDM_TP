@@ -22,8 +22,8 @@ Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module.vhd" i
 Parsing VHDL file "/home/gonza/Maestria/FPGA_Comms/OFDM_TP/src/top_module_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 254248 KB
-Fuse CPU Usage: 4130 ms
+Fuse Memory Usage: 254260 KB
+Fuse CPU Usage: 4150 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -108,9 +108,9 @@ Compiling architecture fifo_16_1a8_a of entity fifo_16_1a8 [fifo_16_1a8_default]
 Compiling architecture top_module_arch of entity top_module [\top_module:top_module_tb:uut:\]
 Compiling architecture behavior of entity top_module_tb
 Time Resolution for simulation is 1ps.
-Waiting for 21 sub-compilation(s) to finish...
+Waiting for 10 sub-compilation(s) to finish...
 Compiled 272 VHDL Units
 Built simulation executable top_module_tb.exe
-Fuse Memory Usage: 857176 KB
-Fuse CPU Usage: 8220 ms
-GCC CPU Usage: 28590 ms
+Fuse Memory Usage: 857192 KB
+Fuse CPU Usage: 8330 ms
+GCC CPU Usage: 28790 ms
