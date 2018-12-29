@@ -18,6 +18,20 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/xfft_v7_1_1/fft.xci">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/xfft_v7_1_0/ifft.xci">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/viterbi_v7_0_1/viterbi.xco">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
@@ -68,6 +82,14 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/delay.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../IFFT/src/delay.vhd"/>
+        <Attr Name="ImportTime" Val="1546092772"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/src/Cordic_cuatro_cuadrantes.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../cordic_compensado/src/Cordic_cuatro_cuadrantes.vhd"/>
@@ -92,28 +114,6 @@
     </File>
     <File Path="$PPRDIR/src/top_module_tb.vhd">
       <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/xfft_v7_1_0/ifft.xci">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/xfft_v7_1_1/fft.xci">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/delay.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../IFFT/src/delay.vhd"/>
-        <Attr Name="ImportTime" Val="1546092772"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>

@@ -22,7 +22,6 @@ entity delay is
 		clk: in std_logic;
 		rst: in std_logic;
 		ce:  in std_logic;
-		rfd_in : in std_logic;
 		data_in_re: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 		data_in_img: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 		start_o : out std_logic;
