@@ -123,13 +123,16 @@ BEGIN
 		--f2hValid_in<='0';
 		wait for 100 ns;
 		fx2_rst<='0';
+    wait for fx2_clk_period*3;
+
+    -- tengo que poner en 1 por 2 clocks las configuraciones de los xFFT
 
 		wait for fx2_clk_period*100;
 
 		wait until fx2_clk = '1';
 
-		for i_loop in 0 to 32 loop
-			h2fData_out <= std_logic_vector(to_unsigned(i_loop, h2fData_out'length));
+		for i_loop in 0 to 15 loop
+			h2fData_out <= std_logic_vector(to_unsigned(i_loop*5, h2fData_out'length));
 			h2fValid_out<='1';
 			wait for fx2_clk_period;
 		end loop;

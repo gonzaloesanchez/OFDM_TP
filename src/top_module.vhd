@@ -105,6 +105,73 @@ architecture top_module_arch of top_module is
     );
 	END COMPONENT;
 
+	-- Delay para ingreso a IFFT (e ingreso a FFT tambien)
+
+	COMPONENT delay is
+		generic(
+			N : natural := 16 --Ancho de la palabra
+		);
+		port(
+			clk: in std_logic;
+			rst: in std_logic;
+			ce:  in std_logic;
+			data_in_re: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			data_in_img: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			start_o : out std_logic;
+			data_out_re: out STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			data_out_img: out STD_LOGIC_VECTOR(N-1 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	-- IFFT
+	COMPONENT ifft
+  	PORT (
+	    clk : IN STD_LOGIC;
+	    ce : IN STD_LOGIC;
+	    sclr : IN STD_LOGIC;
+	    start : IN STD_LOGIC;
+	    unload : IN STD_LOGIC;
+	    xn_re : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	    xn_im : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	    fwd_inv : IN STD_LOGIC;
+	    fwd_inv_we : IN STD_LOGIC;
+	    rfd : OUT STD_LOGIC;
+	    xn_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	    busy : OUT STD_LOGIC;
+	    edone : OUT STD_LOGIC;
+	    done : OUT STD_LOGIC;
+	    dv : OUT STD_LOGIC;
+	    xk_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	    xk_re : OUT STD_LOGIC_VECTOR(22 DOWNTO 0);
+	    xk_im : OUT STD_LOGIC_VECTOR(22 DOWNTO 0)
+	  );
+	END COMPONENT;
+
+--FFT
+	COMPONENT fft
+  PORT (
+    clk : IN STD_LOGIC;
+    ce : IN STD_LOGIC;
+    sclr : IN STD_LOGIC;
+    start : IN STD_LOGIC;
+    unload : IN STD_LOGIC;
+    xn_re : IN STD_LOGIC_VECTOR(22 DOWNTO 0);
+    xn_im : IN STD_LOGIC_VECTOR(22 DOWNTO 0);
+    fwd_inv : IN STD_LOGIC;
+    fwd_inv_we : IN STD_LOGIC;
+    rfd : OUT STD_LOGIC;
+    xn_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    busy : OUT STD_LOGIC;
+    edone : OUT STD_LOGIC;
+    done : OUT STD_LOGIC;
+    dv : OUT STD_LOGIC;
+    xk_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    xk_re : OUT STD_LOGIC_VECTOR(29 DOWNTO 0);
+    xk_im : OUT STD_LOGIC_VECTOR(29 DOWNTO 0)
+  );
+END COMPONENT;
+
+
 	-- CORDIC
 	COMPONENT cordic_completo
 	generic(
@@ -221,6 +288,40 @@ architecture top_module_arch of top_module is
 	signal mapper_en_s : std_logic;
 	signal mapper_dv_s : std_logic;
 
+	-- anchos de palabra para IFFT y FFT
+
+	constant N_IFFT: integer:= 16;		--ancho de palabra de entrada para FFT
+	constant N_FFT: integer:= 23;		--ancho de palabra de entrada para FFT
+	constant N_OUT_FFT: integer:= 30;		--ancho de palabra de salida para FFT
+
+	-- Delay para ifft
+	signal delay_ifft_in_re,delay_ifft_in_im : std_logic_vector(N_IFFT-1 downto 0);
+	signal delay_ifft_out_re,delay_ifft_out_im : std_logic_vector(N_IFFT-1 downto 0);
+	signal delay_ifft_start_out_s : std_logic;
+	signal delay_ifft_en_s : std_logic;
+
+	--IFFT
+	signal ifft_in_re,ifft_in_im : std_logic_vector(N_IFFT-1 downto 0);
+	signal ifft_out_re,ifft_out_im : std_logic_vector(N_FFT-1 downto 0);
+	signal ifft_start_s : std_logic;
+	signal ifft_we_s : std_logic;
+	signal ifft_done_s : std_logic;
+	signal ifft_dv_s : std_logic;
+
+	--Delay para FFT
+	signal delay_fft_in_re,delay_fft_in_im : std_logic_vector(N_FFT-1 downto 0);
+	signal delay_fft_out_re,delay_fft_out_im : std_logic_vector(N_FFT-1 downto 0);
+	signal delay_fft_start_out_s : std_logic;
+	signal delay_fft_en_s : std_logic;
+
+	--FFT
+	signal fft_in_re,fft_in_im : std_logic_vector(N_FFT-1 downto 0);
+	signal fft_out_re,fft_out_im : std_logic_vector(N_OUT_FFT-1 downto 0);
+	signal fft_start_s : std_logic;
+	signal fft_we_s : std_logic;
+	signal fft_done_s : std_logic;
+	signal fft_dv_s : std_logic;
+
 	--CORDIC
 	signal cordic_real_in,cordic_img_in : std_logic_vector(15 downto 0);
 	signal cordic_en_s : std_logic;
@@ -329,10 +430,106 @@ begin
 	  );
 
 
-		--Conexiones desde MAPPER a CORDIC
-		cordic_en_s <= mapper_dv_s;
-		cordic_real_in <= mapper_real_out;
-		cordic_img_in <= mapper_img_out;
+		--Conexiones desde MAPPER a DELAY IFFT
+		delay_ifft_en_s <= mapper_dv_s;
+		delay_ifft_in_re <= mapper_real_out;
+		delay_ifft_in_im <= mapper_img_out;
+
+		-- DELAY IFFT
+		delay_ifft:delay
+		generic map(N => N_IFFT)
+		port map(
+			clk => clk_s,
+			rst =>  rst_s,
+			ce => delay_ifft_en_s,
+			data_in_re => delay_ifft_in_re,
+			data_in_img => delay_ifft_in_im,
+			start_o => delay_ifft_start_out_s,
+			data_out_re => delay_ifft_out_re,
+			data_out_img=> delay_ifft_out_im
+		);
+
+		--Conexiones desde DELAY IFFT a IFFT
+		ifft_start_s <= delay_ifft_start_out_s;
+		ifft_in_re <= delay_ifft_out_re;
+		ifft_in_im <= delay_ifft_out_im;
+
+		-- IFFT
+		ifft0: ifft
+		PORT MAP (
+			clk => clk_s,
+			ce => '1',
+			sclr => rst_s,
+			start => ifft_start_s,
+	    unload => ifft_done_s,
+			xn_re => ifft_in_re,
+			xn_im => ifft_in_im,
+			fwd_inv => '0',						--IFFT
+			fwd_inv_we => ifft_we_s,
+			rfd => open,
+			xn_index => open,
+			busy => open,
+			edone => open,
+			done => ifft_done_s,
+			dv => ifft_dv_s,
+			xk_index => open,
+			xk_re => ifft_out_re,
+			xk_im => ifft_out_im
+		);
+
+
+		--Conexiones desde IFFT a DELAY FFT
+		delay_fft_en_s <= ifft_dv_s;
+		delay_fft_in_re <= ifft_out_re;
+		delay_fft_in_im <= ifft_out_im;
+
+		--DELAY FFT
+		delay_fft:delay
+		generic map(N => N_FFT)
+		port map(
+			clk => clk_s,
+			rst =>  rst_s,
+			ce => delay_fft_en_s,
+			data_in_re => delay_fft_in_re,
+			data_in_img => delay_fft_in_im,
+			start_o => delay_fft_start_out_s,
+			data_out_re => delay_fft_out_re,
+			data_out_img=> delay_fft_out_im
+		);
+
+		--Conexiones desde DELAY FFT a FFT
+		fft_start_s <= delay_fft_start_out_s;
+		fft_in_re <= delay_fft_out_re;
+		fft_in_im <= delay_fft_out_im;
+
+		--FFT
+		fft0: fft
+		PORT MAP (
+			clk => clk_s,
+			ce => '1',
+			sclr => rst_s,
+			start => fft_start_s,
+	    unload => fft_done_s,
+			xn_re => fft_in_re,
+			xn_im => fft_in_im,
+			fwd_inv => '1',						--IFFT
+			fwd_inv_we => fft_we_s,
+			rfd => open,
+			xn_index => open,
+			busy => open,
+			edone => open,
+			done => fft_done_s,
+			dv => fft_dv_s,
+			xk_index => open,
+			xk_re => fft_out_re,
+			xk_im => fft_out_im
+		);
+
+		--Conexiones desde FFT a CORDIC
+		cordic_en_s <= fft_dv_s;
+		cordic_real_in <= fft_out_re(N_OUT_FFT-1 downto N_OUT_FFT-16);
+		cordic_img_in <= fft_out_im(N_OUT_FFT-1 downto N_OUT_FFT-16);
+
 
 		--CORDIC
 		cordic0: cordic_completo
@@ -437,5 +634,33 @@ begin
 		);
 
 		fifo_out_rd_en_s<=not fifo_out_empty_s;
+
+		process (clk_system)
+		variable count: integer range 0 to 21:= 0;
+		begin
+			if rising_edge(clk_system) then
+				if fx2_rst = '1' then
+					ifft_we_s <= '0';
+					fft_we_s <= '0';
+				else
+					count := count+1;
+					if (count = 10) then
+						ifft_we_s <= '1';
+						fft_we_s <= '1';
+					end if;
+
+					if (count = 11) then
+						ifft_we_s <= '0';
+						fft_we_s <= '0';
+					end if;
+
+					if(count > 12) then
+						count := 12;
+					end if;
+
+				end if;
+			end if;
+
+		end process;
 
 end top_module_arch;
