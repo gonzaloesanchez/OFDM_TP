@@ -115,7 +115,6 @@ architecture top_module_arch of top_module is
 			clk: in std_logic;
 			rst: in std_logic;
 			ce:  in std_logic;
-			rfd_in : in std_logic;
 			data_in_re: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 			data_in_img: in STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 			start_o : out std_logic;
@@ -514,7 +513,7 @@ begin
 			xn_re => fft_in_re,
 			xn_im => fft_in_im,
 			fwd_inv => '1',						--IFFT
-			fwd_inv_we => fft_we_s,
+			fwd_inv_we => 'fft_we_s',
 			rfd => open,
 			xn_index => open,
 			busy => open,
@@ -528,8 +527,8 @@ begin
 
 		--Conexiones desde FFT a CORDIC
 		cordic_en_s <= fft_dv_s;
-		cordic_real_in <= fft_out_re;
-		cordic_img_in <= fft_out_im;
+		cordic_real_in <= fft_out_re(N_OUT_FFT-1 downto N_OUT_FFT-16);
+		cordic_img_in <= fft_out_im(N_OUT_FFT-1 downto N_OUT_FFT-16);
 
 
 		--CORDIC

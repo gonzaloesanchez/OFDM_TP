@@ -3,19 +3,55 @@
   <IPInstance name="ifft">
     <FileSets>
       <FileSet generator="apply_current_project_options_generator">
-        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Sat Dec 29 14:19:30 GMT 2018" checksum="0xFFFFFFFF"></File>
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
       </FileSet>
-      <FileSet generator="customization_generator">
-        <File name="./customization_generator.xlog" type="ignore" timestamp="Sat Dec 29 14:19:30 GMT 2018" checksum="0xFFFFFFFF"></File>
+      <FileSet generator="model_parameter_resolution_generator">
+        <File name="./model_parameter_resolution_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
       </FileSet>
       <FileSet generator="ip_xco_generator">
-        <File name="./ifft.xco" type="xco" timestamp="Sat Dec 29 14:19:30 GMT 2018" checksum="0x893870FC"></File>
+        <File name="./ifft.xco" type="xco" timestamp="Sat Dec 29 15:23:18 GMT 2018" checksum="0xEA5FD3FD"></File>
+      </FileSet>
+      <FileSet generator="associated_files_generator">
+        <File name="./associated_files_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ngc_netlist_generator">
+        <File name="./ifft.ngc" type="ngc" timestamp="Sat Dec 29 15:25:59 GMT 2018" checksum="0x728C76E7"></File>
+      </FileSet>
+      <FileSet generator="obfuscate_netlist_generator">
+        <File name="./ifft.ngc" type="ngc" timestamp="Sat Dec 29 15:26:00 GMT 2018" checksum="0x82A15459"></File>
+      </FileSet>
+      <FileSet generator="padded_implementation_netlist_generator">
+        <File name="./padded_implementation_netlist_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
       </FileSet>
       <FileSet generator="instantiation_template_generator">
-        <File name="./ifft.vho" type="vho" timestamp="Sat Dec 29 14:19:30 GMT 2018" checksum="0x9D4F3A90"></File>
+        <File name="./ifft.vho" type="vho" timestamp="Sat Dec 29 15:26:00 GMT 2018" checksum="0x9D4F3A90"></File>
+      </FileSet>
+      <FileSet generator="rtl_simulation_model_generator">
+        <File name="./ifft.vhd" type="vhdl" timestamp="Sat Dec 29 15:26:01 GMT 2018" checksum="0x1ACDFE4E"></File>
+      </FileSet>
+      <FileSet generator="synthesis_instantiation_wrapper_generator">
+        <File name="./synthesis_instantiation_wrapper_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="all_documents_generator">
+        <File name="./ifft/doc/xfft_ds260.pdf" type="ignore" timestamp="Sat Dec 29 15:26:02 GMT 2018" checksum="0xF0DBDE59"></File>
+        <File name="./ifft/doc/xfft_v7_1_readme.txt" type="ignore" timestamp="Sat Dec 29 15:26:02 GMT 2018" checksum="0x432BEF69"></File>
+        <File name="./ifft/doc/xfft_v7_1_vinfo.html" type="ignore" timestamp="Sat Dec 29 15:26:02 GMT 2018" checksum="0xE076F4A1"></File>
+      </FileSet>
+      <FileSet generator="asy_generator">
+        <File name="./ifft.asy" type="asy" timestamp="Sat Dec 29 15:26:04 GMT 2018" checksum="0xCA23B437"></File>
       </FileSet>
       <FileSet generator="xmdf_generator">
-        <File name="./ifft_xmdf.tcl" type="tclXmdf" timestamp="Sat Dec 29 14:19:30 GMT 2018" checksum="0xA2B5AAEB"></File>
+        <File name="./ifft_xmdf.tcl" type="tclXmdf" timestamp="Sat Dec 29 15:26:04 GMT 2018" checksum="0x1CCA5EA4"></File>
+      </FileSet>
+      <FileSet generator="ise_generator">
+        <File name="./ifft.gise" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0x7130126F"></File>
+        <File name="./ifft.xise" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0x6D58B4C1"></File>
+      </FileSet>
+      <FileSet generator="deliver_readme_generator">
+        <File name="./deliver_readme_generator.xlog" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="flist_generator">
+        <File name="./ifft_flist.txt" type="ignore" timestamp="Sat Dec 29 15:26:08 GMT 2018" checksum="0xAC5D991D"></File>
       </FileSet>
     </FileSets>
   </IPInstance>

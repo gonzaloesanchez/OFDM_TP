@@ -123,6 +123,9 @@ BEGIN
 		--f2hValid_in<='0';
 		wait for 100 ns;
 		fx2_rst<='0';
+    wait for fx2_clk_period*3;
+
+    -- tengo que poner en 1 por 2 clocks las configuraciones de los xFFT
 
 		wait for fx2_clk_period*100;
 
